@@ -1,0 +1,22 @@
+[
+  {
+    "step": "01",
+    "title": "Cerere Ofertă & Calcul Tehnic",
+    "description": "Completezi formularul sau ne suni direct. Dimensionăm exact numărul de panouri și bateriile necesare pentru proprietatea ta."
+  },
+  {
+    "step": "02",
+    "title": "Evaluare pe Teren în Zona de Vest",
+    "description": "Echipa noastră efectuează măsurătorile pe acoperiș în Arad, Timișoara sau județele limitrofe (ori național pentru proiecte mari cu baterii)."
+  },
+  {
+    "step": "03",
+    "title": "Montaj la Cheie Panouri & Baterii",
+    "description": "Instalăm structura de ancorare, montăm panourile, invertorul hibrid și conectăm bancul de acumulatori LiFePO4 în 1-2 zile."
+  },
+  {
+    "step": "04",
+    "title": "Probe PRAM, Testare UPS & Punere în Funcțiune",
+    "description": "Efectuăm probele electrice de siguranță, testăm comutarea pe baterii la pneuri de curent și predăm sistemul funcțional la cheie."
+  }
+]

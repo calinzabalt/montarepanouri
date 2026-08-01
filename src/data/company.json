@@ -1,0 +1,48 @@
+{
+  "name": "MontarePanouri.ro",
+  "legalName": "S.C. MONTARE PANOURI FOTOVOLTAICE S.R.L.",
+  "slogan": "Montaj Panouri Fotovoltaice & Baterii la Cheie în Vestul României",
+  "phone": "+40 700 000 000",
+  "phoneRaw": "0700000000",
+  "whatsapp": "https://wa.me/40700000000",
+  "email": "contact@montarepanouri.ro",
+  "address": "Calea Aradului nr. 45, Timișoara / Arad",
+  "primaryRegion": "Zona de Vest (Timiș, Arad, Bihor, Caraș-Severin, Hunedoara)",
+  "nationalPolicy": "Proiecte în toată țara disponibile pentru sisteme mari cu stocare pe baterii",
+  "schedule": "Luni - Vineri: 08:00 - 18:00 | Sâmbătă: 09:00 - 14:00",
+  "anreCertificate": "Atestat ANRE Tip C1A / C2A pentru montaj și proiectare fotovoltaice",
+  "warranty": {
+    "panels": "25 ani garanție eficiență panouri",
+    "inverters": "10-15 ani garanție invertoare hibrid",
+    "batteries": "10 ani (6000+ cicluri) garanție acumulatori LiFePO4",
+    "mounting": "5 ani garanție manoperă montaj"
+  },
+  "countiesPrimary": [
+    "Timiș (Timișoara)",
+    "Arad",
+    "Bihor (Oradea)",
+    "Caraș-Severin (Reșița)",
+    "Hunedoara (Deva)"
+  ],
+  "countiesNational": [
+    "București & Ilfov (Proiecte Mari + Baterii)",
+    "Cluj (Proiecte Mari + Baterii)",
+    "Brașov (Proiecte Mari + Baterii)",
+    "Sibiu (Proiecte Mari + Baterii)",
+    "Prahova (Proiecte Mari + Baterii)",
+    "Constanța (Proiecte Mari + Baterii)",
+    "Iași (Proiecte Mari + Baterii)",
+    "Dolj (Proiecte Mari + Baterii)"
+  ],
+  "socials": {
+    "facebook": "https://facebook.com/montarepanouri",
+    "instagram": "https://instagram.com/montarepanouri",
+    "youtube": "https://youtube.com/montarepanouri",
+    "linkedin": "https://linkedin.com/company/montarepanouri"
+  },
+  "legal": {
+    "anpc": "https://anpc.ro",
+    "sal": "https://anpc.ro/ce-este-sal/",
+    "sol": "https://ec.europa.eu/consumers/odr"
+  }
+}

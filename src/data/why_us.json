@@ -1,0 +1,38 @@
+[
+  {
+    "id": "why-1",
+    "icon": "MapPin",
+    "title": "Specialiști Zona de Vest (Arad & Timișoara)",
+    "description": "Acoperire prioritară în județele Timiș, Arad, Bihor, Caraș-Severin și Hunedoara cu deplasare și instalare rapidă."
+  },
+  {
+    "id": "why-2",
+    "icon": "BatteryCharging",
+    "title": "Montaj la Cheie: Panouri + Baterii",
+    "description": "Suntem specializați strict pe montaj fizic și conexiune electrică la cheie pentru panouri fotovoltaice și acumulatori de stocare LiFePO4."
+  },
+  {
+    "id": "why-3",
+    "icon": "Truck",
+    "title": "Proiecte Mari în Toată Țara",
+    "description": "Preluăm proiecte de dimensiuni mari și parcuri comerciale cu stocare pe baterii în orice județ din România."
+  },
+  {
+    "id": "why-4",
+    "icon": "ShieldCheck",
+    "title": "Echipă Autorizată ANRE",
+    "description": "Ingineri și electricieni atestați ANRE C1A/C2A. Execuție tehnică impecabilă a tabloului DC/AC și protecțiilor electrice."
+  },
+  {
+    "id": "why-5",
+    "icon": "Clock",
+    "title": "Montaj Rapid în 48 de Ore",
+    "description": "Echipe proprii echipate profesional. Montăm rapid structurile din aluminiu, invertoarele hibrid și bancurile de baterii."
+  },
+  {
+    "id": "why-6",
+    "icon": "Zap",
+    "title": "Garanție Extinsă 25 Ani",
+    "description": "Panouri Tier 1 cu garanție de producție de 25 ani, invertoare și baterii LiFePO4 cu garanție de 10 ani și 5 ani garanție pe manoperă."
+  }
+]

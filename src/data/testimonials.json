@@ -1,0 +1,29 @@
+[
+  {
+    "id": "t-1",
+    "name": "Mihai Constantinescu",
+    "location": "Snagov, Ilfov",
+    "rating": 5,
+    "system": "Sistem 8kW Hybrid + Baterie 10kWh",
+    "text": "Băieții au montat sistemul în doar o zi jumătate. Curățenie impecabilă pe acoperiș și în camera tehnică. Aplicația pe telefon funcționează perfect, iar dosarul de prosumator a fost aprobat fără nicio obiecție.",
+    "date": "Mai 2026"
+  },
+  {
+    "id": "t-2",
+    "name": "Radu & Simona Popescu",
+    "location": "Râșnov, Brașov",
+    "rating": 5,
+    "system": "Sistem 6kW + Baterie LiFePO4",
+    "text": "Am scăpat definitiv de grijile caderilor de curent iarna. Bateria comută automat sub 10 milisecunde. Factura de energie ne-a scăzut de la 750 lei pe lună la 40 de lei taxa de abonament!",
+    "date": "Aprilie 2026"
+  },
+  {
+    "id": "t-3",
+    "name": "Ing. Florin Diaconu (Director Tehnic Logistica B2B)",
+    "location": "Ploiești, Prahova",
+    "rating": 5,
+    "system": "Parc Fotovoltaic Commercial 120kW",
+    "text": "Lucrare impecabilă pentru hala noastră de depozitare. Echipa de ingineri MontarePanouri ne-a oferit consultanță tehnică excelentă de la calculul de autoconsum până la racordarea finală.",
+    "date": "Martie 2026"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "faq-1",
+    "question": "În ce zone din țară efectuați montajul panourilor și bateriilor?",
+    "answer": "Principalul nostru focus este zona de Vest a României: Timișoara, Arad, Bihor (Oradea), Caraș-Severin și Hunedoara. Totuși, preluăm proiecte în TOATĂ ȚARA pentru lucrări de dimensiuni mari care includ și montarea sistemelor de stocare pe baterii."
+  },
+  {
+    "id": "faq-2",
+    "question": "Vă ocupați de întocmirea dosarului de prosumator?",
+    "answer": "Compania noastră se focusează exclusiv pe executarea la cheie a părții tehnice: montaj fizic panouri pe acoperiș, instalare invertoare, conectare bancuri de baterii LiFePO4 și tablou de protecții DC/AC. Nu realizăm dosare de prosumator, dar vă punem la dispoziție buletinele de încercare tehnică PRAM și fișele echipamentelor."
+  },
+  {
+    "id": "faq-3",
+    "question": "Sunteți autorizați ANRE?",
+    "answer": "Da! Deținem atestat ANRE de Tip C1A și C2A pentru lucrări și instalații electrice. Fiecare sistem este montat conform normativelor în vigoare de către electricieni și ingineri autorizați."
+  },
+  {
+    "id": "faq-4",
+    "question": "Cât durează montajul unui sistem fotovoltaic rezidențial?",
+    "answer": "Echipele noastre proprii finalizează montajul fizic pe acoperiș și conectarea tabloului electric/bateriilor în doar 1-2 zile lucrătoare."
+  },
+  {
+    "id": "faq-5",
+    "question": "Ce garanție oferii pentru montaj și echipamente?",
+    "answer": "Oferim 25 ani garanție de eficiență liniară pentru panourile Tier 1, 10 ani garanție pentru invertoarele hibride, 10 ani (peste 6000 cicluri) pentru bateriile LiFePO4 și 5 ani garanție directă pe manopera de montaj."
+  },
+  {
+    "id": "faq-6",
+    "question": "Puteți adăuga baterii de stocare la un sistem fotovoltaic deja existent?",
+    "answer": "Da! Adăugarea de acumulatori LiFePO4 și invertoare hibride/retrofit este una dintre specializările noastre principale. Instalăm baterii la cheie atât în zona Arad/Timișoara, cât și la nivel național."
+  }
+]
