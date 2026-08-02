@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Clock, User, Calendar, Tag, ArrowLeft, Send, ShieldCheck, Sun } from "lucide-react";
+import { Clock, User, Calendar, Tag, ArrowLeft, ShieldCheck, Sun } from "lucide-react";
 import blogData from "@/data/blog.json";
 import companyData from "@/data/company.json";
 
@@ -110,9 +110,10 @@ export default async function BlogArticlePage({ params }: PageProps) {
               <Image
                 src={article.image}
                 alt={article.title}
-                fill
+                width={1400}
+                height={900}
                 priority
-                className="object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
 

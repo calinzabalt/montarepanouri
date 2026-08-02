@@ -8,10 +8,7 @@ import {
   Mail, 
   MapPin, 
   ShieldCheck, 
-  Globe, 
-  Share2, 
-  Video, 
-  MessageSquare,
+  MessageCircle,
   ExternalLink
 } from "lucide-react";
 import companyData from "@/data/company.json";
@@ -52,43 +49,17 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Social Links */}
+            {/* WhatsApp only */}
             <div className="flex items-center gap-3 pt-2">
               <a
-                href={companyData.socials.facebook}
+                href={companyData.whatsapp}
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-emerald-500 transition-colors"
-                aria-label="Facebook"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/35 text-emerald-400 hover:text-white hover:bg-emerald-500/20 hover:border-emerald-400 transition-colors text-xs font-semibold"
+                aria-label="WhatsApp"
               >
-                <Globe className="w-4 h-4" />
-              </a>
-              <a
-                href={companyData.socials.instagram}
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-emerald-500 transition-colors"
-                aria-label="Instagram"
-              >
-                <Share2 className="w-4 h-4" />
-              </a>
-              <a
-                href={companyData.socials.youtube}
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-emerald-500 transition-colors"
-                aria-label="Youtube"
-              >
-                <Video className="w-4 h-4" />
-              </a>
-              <a
-                href={companyData.socials.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-emerald-500 transition-colors"
-                aria-label="Linkedin"
-              >
-                <MessageSquare className="w-4 h-4" />
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp
               </a>
             </div>
           </div>

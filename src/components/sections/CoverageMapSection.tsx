@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MapPin, Truck, ShieldCheck, PhoneCall, BatteryCharging } from "lucide-react";
+import { MapPin, ShieldCheck, PhoneCall, BatteryCharging } from "lucide-react";
 import companyData from "@/data/company.json";
 
 interface CoverageMapSectionProps {

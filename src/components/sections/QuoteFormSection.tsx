@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Send, CheckCircle2, ShieldCheck, Phone, Zap, MapPin } from "lucide-react";
+import { Send, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
 import companyData from "@/data/company.json";
 
 interface QuoteFormSectionProps {

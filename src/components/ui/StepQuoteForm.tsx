@@ -16,7 +16,6 @@ import {
   ArrowLeft,
   ShieldCheck
 } from "lucide-react";
-import companyData from "@/data/company.json";
 
 export default function StepQuoteForm() {
   const [currentStep, setCurrentStep] = useState(1);

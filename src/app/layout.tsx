@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Inter } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Breadcrumbs from "@/components/layout/Breadcrumbs";
+import FloatingWhatsAppButton from "@/components/ui/FloatingWhatsAppButton";
 import companyData from "@/data/company.json";
+import blogData from "@/data/blog.json";
+import servicesData from "@/data/services.json";
+
+const inter = Inter({
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://montarepanouri.ro"),
@@ -45,6 +54,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const breadcrumbBlogEntries = blogData.map((entry) => ({
+    slug: entry.slug,
+    title: entry.title,
+  }));
+
+  const breadcrumbServiceEntries = servicesData.map((entry) => ({
+    slug: entry.slug,
+    title: entry.title,
+  }));
+
   // LocalBusiness Structured Schema Markup
   const localBusinessSchema = {
     "@context": "https://schema.org",
@@ -65,21 +84,20 @@ export default function RootLayout({
   return (
     <html lang="ro" className="">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
-      <body className="antialiased selection:bg-emerald-500 selection:text-white">
+      <body className={`${inter.className} antialiased selection:bg-emerald-500 selection:text-white`}>
         <Header />
+        <Breadcrumbs
+          blogEntries={breadcrumbBlogEntries}
+          serviceEntries={breadcrumbServiceEntries}
+        />
         <main>{children}</main>
         <Footer />
+        <FloatingWhatsAppButton />
       </body>
     </html>
   );

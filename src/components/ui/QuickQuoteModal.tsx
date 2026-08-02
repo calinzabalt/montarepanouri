@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, Send, CheckCircle2, ShieldCheck, PhoneCall, MapPin } from "lucide-react";
+import { X, Send, CheckCircle2, ShieldCheck, PhoneCall } from "lucide-react";
 
 interface QuickQuoteModalProps {
   isOpen: boolean;

@@ -61,8 +61,9 @@ export default function BlogSection({
               <Image
                 src={highlightedArticle.image}
                 alt={highlightedArticle.title}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                width={1400}
+                height={900}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute top-4 left-4 px-3 py-1 bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider rounded-lg shadow-lg">
                 Articol Recomandat
@@ -121,8 +122,9 @@ export default function BlogSection({
                   <Image
                     src={art.image}
                     alt={art.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    width={1200}
+                    height={700}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-3 left-3 px-2.5 py-0.5 bg-slate-950/80 backdrop-blur-md border border-slate-800 text-emerald-400 text-[11px] font-bold rounded">
                     {art.categoryLabel}

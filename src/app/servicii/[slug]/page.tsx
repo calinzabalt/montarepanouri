@@ -1,14 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { 
   ShieldCheck, 
   CheckCircle2, 
   Zap, 
-  ArrowRight, 
-  HelpCircle,
-  Maximize2
+  ArrowRight
 } from "lucide-react";
 import servicesData from "@/data/services.json";
 import QuoteFormSection from "@/components/sections/QuoteFormSection";
@@ -111,9 +108,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <Image
                 src={service.image}
                 alt={service.title}
-                fill
+                width={1400}
+                height={900}
                 priority
-                className="object-cover"
+                className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
             </div>
@@ -174,8 +172,9 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   <Image
                     src={img}
                     alt={`${service.title} - Imagine ${i + 1}`}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    width={900}
+                    height={700}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors" />
                 </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import Metadata from "next";
 import ServicesSection from "@/components/sections/ServicesSection";
 import WhyUsSection from "@/components/sections/WhyUsSection";
 import QuoteFormSection from "@/components/sections/QuoteFormSection";

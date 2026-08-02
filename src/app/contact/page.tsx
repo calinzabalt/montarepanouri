@@ -8,8 +8,7 @@ import {
   Clock, 
   MessageCircle, 
   Send, 
-  CheckCircle2, 
-  ShieldCheck 
+  CheckCircle2
 } from "lucide-react";
 import companyData from "@/data/company.json";
 import CoverageMapSection from "@/components/sections/CoverageMapSection";
