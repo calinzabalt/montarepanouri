@@ -29,7 +29,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-28 bg-slate-950 min-h-screen text-slate-200">
+    <div className="bg-slate-950 min-h-screen text-slate-200">
       
       {/* Header */}
       <div className="py-12 bg-slate-900/60 border-b border-slate-800 text-center">

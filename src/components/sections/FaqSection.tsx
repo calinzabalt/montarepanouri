@@ -19,7 +19,7 @@ interface FaqSectionProps {
 export default function FaqSection({
   faqs = defaultFaqs,
   title = "Întrebări Frecvente (FAQ)",
-  subtitle = "Răspunsuri transparente la cele mai comune nedumeriri privind costurile, procesul de montaj și autorizarea ANRE.",
+  subtitle = "Răspunsuri clare la cele mai comune întrebări despre costuri, procesul de montaj și garanție.",
 }: FaqSectionProps) {
   const [openId, setOpenId] = useState<string | null>(faqs[0]?.id || null);
 

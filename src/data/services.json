@@ -1,193 +1,197 @@
 [
   {
     "slug": "instalatii-panouri-fotovoltaice-rezidential",
-    "title": "Instalații Panouri Fotovoltaice (Rezidențial)",
-    "shortDescription": "Montaj la cheie panouri solare de la 3kW la 15kW pentru case și vile în zona Arad, Timișoara și Vestul României.",
-    "heroSubtitle": "Transformă-ți acoperișul într-o sursă proprie de energie. Montaj tehnic autorizat ANRE în 48 de ore, axat pe performanță fizică și siguranță electrică.",
+    "title": "Montaj Panouri Solare Rezidențial",
+    "shortDescription": "Montaj panouri solare pe acoperișuri de case și vile. Lucrăm la cheie în Arad, Timișoara și Vestul României.",
+    "heroSubtitle": "Transformă-ți acoperișul într-o sursă proprie de energie. Montaj panouri solare la cheie, cu accent pe siguranță și aspect curat pe acoperiș.",
     "icon": "Sun",
-    "image": "/images/montaj-fotovoltaice-rezidential.jpg",
+    "image": "/images/panouri-pe-acoperis-tila.jpg",
     "galleryImages": [
-      "/images/montaj-fotovoltaice-rezidential.jpg",
       "/images/panouri-pe-acoperis-tila.jpg",
       "/images/panouri-acoperis.jpg",
+      "/images/panouri-fotovoltaice-parc.jpg",
       "/images/invertoare-tablou-electric.jpg"
     ],
     "highlights": [
-      "Panouri Monocristaline N-Type / TOPCon de 450W - 580W cu eficiență de peste 22%",
-      "Invertoare hibride monofazate și trifazate (Huawei, Sungrow, Fronius, Solax, Deye)",
-      "Montaj fizic la cheie executat de specialiști autorizați ANRE",
-      "Monitorizare inteligentă în timp real direct pe telefonul mobil",
-      "Structuri din aluminiu anodizat pentru țiglă, tablă sau terasă plată"
+      "Montaj panouri solare pe acoperiș tip țiglă, tablă sau alte tipuri uzuale",
+      "Fixare pe structură dedicată, cu atenție la hidroizolație",
+      "Conectare invertor și tablou electric",
+      "Punere în funcțiune și verificare pe teren",
+      "Acoperire principală: Arad, Timișoara și zona de Vest"
     ],
     "specs": [
-      { "label": "Garanție Panouri", "value": "25 ani eficiență liniară" },
+      { "label": "Garanție", "value": "Garanție pe echipamente & montaj" },
       { "label": "Timp Montaj", "value": "1 - 2 zile lucrătoare" },
-      { "label": "Zona Principală", "value": "Arad, Timișoara & Vest" },
-      { "label": "Serviciu", "value": "Montaj la Cheie" }
+      { "label": "Zona", "value": "Arad, Timișoara & Vest" },
+      { "label": "Serviciu", "value": "Montaj la cheie" }
     ],
     "features": [
       {
-        "title": "Sisteme On-Grid & Hibride",
-        "description": "Configurații flexibile care funcționează atât conectate la rețeaua națională, cât și pregătite pentru stocare directă în acumulatori."
+        "title": "Montaj pe Acoperiș",
+        "description": "Instalăm panourile pe acoperișuri rezidențiale, cu structură potrivită tipului de învelitoare și aliniere curată pe șine."
       },
       {
-        "title": "Protecție Electrică Completă",
-        "description": "Tablou DC/AC dedicat cu descărcătoare de supratensiune, siguranțe fuzibile și întrerupătoare automate de calitate industrială."
+        "title": "Conectare Electrică",
+        "description": "Racordăm panourile la invertor și la tabloul de protecții, cu verificări pe teren înainte de predare."
       },
       {
-        "title": "Analiză de Umbrire & Orientare",
-        "description": "Simulare tehnică înainte de instalare pentru optimizarea unghiului de înclinare și plasarea panourilor pe cea mai însorită zonă."
+        "title": "Pregătit pentru Stocare",
+        "description": "Sistemele pot fi configurate și pentru baterii / bancuri de stocare, dacă vrei autonomie și backup."
       }
     ],
     "faq": [
       {
         "question": "Vă ocupați de dosarul de prosumator?",
-        "answer": "Compania noastră este specializată strict pe partea de montaj tehnic la cheie, montare panouri, invertoare și baterii. Nu depunem dosare de prosumator, însă vă predăm toate buletinele de încercări PRAM și documentele tehnice necesare."
+        "answer": "Ne ocupăm de partea de montaj: panouri, invertor și, după caz, baterii. Nu depunem dosare de prosumator, dar predăm documentele tehnice necesare."
       },
       {
-        "question": "În ce județe efectuați montajul rezidențial?",
-        "answer": "Ne focusăm în principal pe zona de vest: Timiș (Timișoara), Arad, Bihor, Caraș-Severin și Hunedoara. Pentru proiecte din alte județe ale țării intervenim dacă include și sistem de stocare pe baterii."
+        "question": "În ce județe faceți montaj rezidențial?",
+        "answer": "Principal în zona de Vest: Timiș, Arad, Bihor, Caraș-Severin și Hunedoara. Pentru proiecte mai mari cu stocare putem interveni și în alte județe."
       }
     ]
   },
   {
     "slug": "sisteme-de-stocare-si-baterii",
-    "title": "Sisteme de Stocare și Baterii",
-    "shortDescription": "Acumulatori LiFePO4 de înaltă performanță pentru autonomie noaptea și modul Backup UPS la pneuri de curent. Montaj la cheie național pentru proiecte mari.",
-    "heroSubtitle": "Stochează excesul de energie produs ziua și folosește-l noaptea sau în timpul panelor de curent. Preluăm montaj de baterii în toată țara!",
+    "title": "Baterii & Bancuri de Stocare",
+    "shortDescription": "Montaj și verificare pentru baterii / bancuri de stocare: autonomie, backup și monitorizare pe teren.",
+    "heroSubtitle": "Folosește energia produsă ziua și noaptea, cu baterii / bancuri de stocare montate și verificate pe teren.",
     "icon": "BatteryCharging",
     "image": "/images/baterii-stocare.jpg",
     "galleryImages": [
       "/images/baterii-stocare.jpg",
+      "/images/diagnostic-mentenanta.jpg",
       "/images/baterie-specs-1.jpg",
-      "/images/baterie-specs-2.jpg",
       "/images/invertoare-tablou-electric.jpg"
     ],
     "highlights": [
-      "Tehnologie LFP (Litiu Fier Fosfat) - cea mai sigură și durabilă chimie de acumulatori",
-      "Capacități modulare extensibile de la 5kWh la peste 50kWh",
-      "Comutare ultra-rapidă la modul Backup (< 10 milisecunde) la căderea rețelei",
-      "Compatibilitate nativă cu invertoare hibride Huawei Luna, SolaX, Deye, Victron, BYD",
-      "Montaj disponibil în Arad/Timișoara cât și Național pentru sisteme mari"
+      "Montaj baterii / bancuri de stocare",
+      "Verificări pe teren: tensiune, conexiuni și stare tehnică",
+      "Integrare cu invertor hibrid",
+      "Monitorizare parametri din aplicație / display invertor",
+      "Disponibil în Vest și național pentru proiecte mai mari"
     ],
     "specs": [
-      { "label": "Chimie Baterie", "value": "LiFePO4 (Litiu Fier Fosfat)" },
-      { "label": "Cicluri de Viață", "value": "> 6.000 cicluri la 90% DoD" },
-      { "label": "Garanție Producător", "value": "10 ani garanție directă" },
-      { "label": "Acoperire Baterii", "value": "Timiș/Arad & Național (Proiecte Mari)" }
+      { "label": "Tip Sistem", "value": "Baterii / bancuri de stocare" },
+      { "label": "Serviciu", "value": "Montaj & verificare" },
+      { "label": "Garanție", "value": "Garanție producător" },
+      { "label": "Acoperire", "value": "Vest & Național (proiecte mari)" }
     ],
     "features": [
       {
-        "title": "Extindere Modularizată",
-        "description": "Poți începe cu un modul de 5kWh și poți adăuga ulterior blocuri suplimentare pe măsură ce consumul tău crește."
+        "title": "Montaj Banc de Stocare",
+        "description": "Instalăm bateriile, facem conexiunile și le legăm de invertorul hibrid, ca sistemul să funcționeze unitar."
       },
       {
-        "title": "BMS Inteligent Integrat",
-        "description": "Sistem automat de management al bateriei care echilibrează celulele, monitorizează temperatura și previne supraîncălzirea."
+        "title": "Verificări pe Teren",
+        "description": "Măsurăm și verificăm parametrii bancului de stocare înainte de predare, ca să confirmăm că totul e în parametri."
       },
       {
-        "title": "Testare Backup & Comutare",
-        "description": "Configurăm și testăm funcția de avarie/UPS pentru ca aparatele esențiale din casă să rămână alimentate când pică rețeaua."
+        "title": "Monitorizare",
+        "description": "Configurăm urmărirea stării de încărcare, a tensiunii și a curentului din display sau din aplicație."
       }
     ],
     "faq": [
       {
-        "question": "Montați baterii și în afara zonei de vest (Arad / Timișoara)?",
-        "answer": "Da! Pentru sisteme de stocare pe baterii de capacitate mare (sau pachete mari panouri + baterii), deplasăm echipele noastre în orice județ din România."
+        "question": "Montați baterii și în afara zonei de Vest?",
+        "answer": "Da. Pentru sisteme de stocare sau pachete panouri + baterii de dimensiuni mai mari, ne deplasăm și în alte județe."
       },
       {
-        "question": "Se pot adăuga baterii la un sistem fotovoltaic deja instalat?",
-        "answer": "Da, putem conecta baterii pe invertoare hibride existente sau putem instala un invertor dedicat de stocare AC-coupled."
+        "question": "Se pot adăuga baterii la un sistem deja instalat?",
+        "answer": "Da, putem adăuga baterii / banc de stocare pe un sistem existent, în funcție de tipul de invertor și de configurația din teren."
       }
     ]
   },
   {
     "slug": "montaj-panouri-commercial-industrial",
-    "title": "Montaj Panouri Commercial & Industrial",
-    "shortDescription": "Instalații fotovoltaice și stocare B2B de la 30kW la peste 1MW pentru hale, fabrici și spații comerciale în Arad, Timișoara și Național.",
-    "heroSubtitle": "Redu costurile operaționale ale afacerii tale cu instalații fotovoltaice robuste și bancuri mari de stocare. Execuție la cheie în toată România.",
+    "title": "Montaj Panouri pe Acoperișuri Mari",
+    "shortDescription": "Montaj panouri solare pe acoperișuri mai mari — case spațioase, clădiri și spații cu consum ridicat pe timpul zilei.",
+    "heroSubtitle": "Instalăm panouri pe suprafețe mai mari de acoperiș, cu montaj la cheie și verificare pe teren.",
     "icon": "Building2",
     "image": "/images/panouri-fotovoltaice-parc.jpg",
     "galleryImages": [
       "/images/panouri-fotovoltaice-parc.jpg",
       "/images/panouri-acoperis.jpg",
       "/images/panouri-pe-acoperis-tila.jpg",
-      "/images/invertoare-tablou-electric.jpg"
+      "/images/montaj-fotovoltaice-rezidential.jpg"
     ],
     "highlights": [
-      "Dimensionare customizată pentru profilul de consum industrial de zi",
-      "Structuri balastate fără perforare pentru mebrană PVC/Bitum sau tablă cutată",
-      "Sisteme de invertoare de rețea și stocare B2B (Huawei, SMA, Sungrow, Deye)",
-      "Proiectare și montaj tehnic avizat de ingineri autorizați ANRE C1A/C2A",
-      "Acoperire Națională pentru proiecte comerciale mari cu baterii"
+      "Montaj panouri pe acoperișuri cu suprafață mai mare",
+      "Structură și fixare adaptate tipului de învelitoare",
+      "Conectare invertor și punere în funcțiune",
+      "Poate include și baterii / bancuri de stocare",
+      "Proiecte în Vest; național pentru lucrări mai mari"
     ],
     "specs": [
-      { "label": "Capacitate Proiect", "value": "30kW - 1.5MW+" },
-      { "label": "Montaj Național", "value": "Da (Proiecte Mari + Baterii)" },
-      { "label": "Certificare ANRE", "value": "Atestat C1A / C2A" },
-      { "label": "Execuție", "value": "Fizică & Electrică la Cheie" }
+      { "label": "Tip Lucrare", "value": "Acoperișuri mai mari" },
+      { "label": "Execuție", "value": "Montaj la cheie" },
+      { "label": "Garanție", "value": "Echipamente & manoperă" },
+      { "label": "Acoperire", "value": "Vest & Național" }
     ],
     "features": [
       {
-        "title": "Optimizare Autoconsum B2B",
-        "description": "Conceput special pentru profilul de consum din timpul zilei al fabricilor și depozitelor comerciale."
+        "title": "Acoperișuri cu Suprafață Mare",
+        "description": "Potrivit pentru clădiri și proprietăți unde ai nevoie de mai multe panouri pe acoperiș, nu doar de o instalație mică rezidențială."
       },
       {
-        "title": "Fără Puncționare Acoperiș",
-        "description": "Folosim structuri aerodinamice balastate pentru terase plate, menținând garanția de hidroizolație a clădirii intactă."
+        "title": "Montaj Curat pe Structură",
+        "description": "Panourile sunt montate pe șine, aliniate și fixate corect pe tipul de acoperiș din teren."
       },
       {
-        "title": "Execuție Tehnică fără Întreruperea Producției",
-        "description": "Lucrăm pe acoperiș fără a afecta activitatea zilnică. Racordul la tabloul general se face în afara orelor de lucru."
+        "title": "Opțiune cu Stocare",
+        "description": "La nevoie, completăm instalația cu baterii / bancuri de stocare pentru un consum mai bun din producție proprie."
       }
     ],
     "faq": [
       {
-        "question": "Preluați proiecte comerciale în toată țara?",
-        "answer": "Da, pentru proiectele comerciale mari și parcurile fotovoltaice cu sisteme de stocare pe baterii asigurăm montaj la cheie în toate județele României."
+        "question": "Lucrați și în afara zonei de Vest?",
+        "answer": "Da, pentru proiecte mai mari de montaj panouri și stocare ne putem deplasa în toată țara."
       }
     ]
   },
   {
     "slug": "mentenanta-diagnostic-curatare",
-    "title": "Mentenanță, Diagnostic & Curățare",
-    "shortDescription": "Inspecții tehnice, termoviziune FLIR și curățare mecanică pentru sisteme rezidențiale și comerciale din Arad, Timișoara și zona de Vest.",
-    "heroSubtitle": "Menține producția maximă a panourilor tale. Depunerile de praf și conexiunile slăbite pot reduce randamentul cu peste 20%.",
+    "title": "Diagnostic & Verificare Tehnică",
+    "shortDescription": "Verificări pe teren pentru baterii, invertor și starea tehnică a sistemului — măsurători și diagnostic, nu doar vizual.",
+    "heroSubtitle": "Verificăm pe teren parametrii bateriilor / bancului de stocare și ai invertorului, ca să știi că sistemul lucrează corect.",
     "icon": "Wrench",
     "image": "/images/diagnostic-mentenanta.jpg",
     "galleryImages": [
       "/images/diagnostic-mentenanta.jpg",
+      "/images/baterii-stocare.jpg",
       "/images/invertoare-tablou-electric.jpg",
-      "/images/panouri-acoperis.jpg",
-      "/images/tester.jpg"
+      "/images/montaj-fotovoltaice-rezidential.jpg"
     ],
     "highlights": [
-      "Inspecție termografică FLIR pentru depistarea celulelor arse și conexiunilor slăbite",
-      "Spălare mecanică cu peri perii moi și apă pură demineralizată",
-      "Verificare strângeri electrice în tablou și măsurători rezistență împământare PRAM",
-      "Verificare parametri acumulatori LiFePO4 și invertoare",
-      "Zone deservite: Timiș, Arad, Bihor, Caraș-Severin, Hunedoara"
+      "Măsurători pe baterii / bancuri de stocare",
+      "Verificare tensiune, rezistență și conexiuni",
+      "Control display invertor / parametri de funcționare",
+      "Diagnostic pe teren, cu poze și valori reale",
+      "Zona principală: Arad, Timișoara și Vestul României"
     ],
     "specs": [
-      { "label": "Frecvență Recomandată", "value": "O dată sau de 2 ori pe an" },
-      { "label": "Echipament Curățare", "value": "Apă demineralizată pură" },
-      { "label": "Diagnoză Termică", "value": "Cameră termoviziune FLIR" },
-      { "label": "Aria de Acoperire", "value": "Zona de Vest (Arad / Timișoara)" }
+      { "label": "Tip Serviciu", "value": "Diagnostic pe teren" },
+      { "label": "Ce Verificăm", "value": "Baterii, invertor, conexiuni" },
+      { "label": "Livrabil", "value": "Concluzii tehnice pe loc" },
+      { "label": "Zonă", "value": "Arad / Timișoara & Vest" }
     ],
     "features": [
       {
-        "title": "Depistare Hot-Spots",
-        "description": "Termoviziunea identifică instant celulele supraîncălzite care pot provoca riscuri de incendiu sau degradare accelerată."
+        "title": "Testare Baterii",
+        "description": "Măsurăm parametrii bancului de stocare pentru a vedea dacă bateriile sunt în stare bună de funcționare."
       },
       {
-        "title": "Apă Demineralizată Pură",
-        "description": "Utilizarea apei ultra-pure nu lasă pete de calcar și previne atragerea rapidă a noilor depuneri pe sticlă."
+        "title": "Verificare Invertor",
+        "description": "Urmărim pe display producția, încărcarea/descărcarea și consumul, ca să confirmăm că sistemul e configurat corect."
+      },
+      {
+        "title": "Conexiuni & Siguranță",
+        "description": "Verificăm legăturile și punctele critice din montaj, ca să evităm probleme care apar în timp."
       }
     ],
     "faq": [
       {
-        "question": "Unde oferiți servicii de mentenanță?",
-        "answer": "Serviciile de mentenanță și curățare se adresează în principal clienților din Arad, Timișoara și județele limitrofe din Vestul țării."
+        "question": "Unde oferiți diagnostic și verificare?",
+        "answer": "În principal în Arad, Timișoara și județele din Vest. Pentru proiecte mai mari putem analiza și deplasări în alte zone."
       }
     ]
   }

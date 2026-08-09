@@ -1,7 +1,7 @@
 {
   "name": "MontarePanouri.ro",
   "legalName": "S.C. MONTARE PANOURI FOTOVOLTAICE S.R.L.",
-  "slogan": "Montaj Panouri Fotovoltaice & Baterii la Cheie în Vestul României",
+  "slogan": "Montaj Panouri Solare & Baterii / Bancuri de Stocare la Cheie",
   "phone": "+40 700 000 000",
   "phoneRaw": "0700000000",
   "whatsapp": "https://wa.me/40700000000",
@@ -10,12 +10,11 @@
   "primaryRegion": "Zona de Vest (Timiș, Arad, Bihor, Caraș-Severin, Hunedoara)",
   "nationalPolicy": "Proiecte în toată țara disponibile pentru sisteme mari cu stocare pe baterii",
   "schedule": "Luni - Vineri: 08:00 - 18:00 | Sâmbătă: 09:00 - 14:00",
-  "anreCertificate": "Atestat ANRE Tip C1A / C2A pentru montaj și proiectare fotovoltaice",
   "warranty": {
-    "panels": "25 ani garanție eficiență panouri",
-    "inverters": "10-15 ani garanție invertoare hibrid",
-    "batteries": "10 ani (6000+ cicluri) garanție acumulatori LiFePO4",
-    "mounting": "5 ani garanție manoperă montaj"
+    "panels": "Garanție producător pentru panouri",
+    "inverters": "Garanție producător pentru invertoare",
+    "batteries": "Garanție producător pentru baterii și bancuri de stocare",
+    "mounting": "Garanție pe manopera de montaj"
   },
   "countiesPrimary": [
     "Timiș (Timișoara)",

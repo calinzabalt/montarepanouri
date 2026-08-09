@@ -52,7 +52,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
   };
 
   return (
-    <div className="pt-28 bg-slate-950 min-h-screen text-slate-200">
+    <div className="bg-slate-950 min-h-screen text-slate-200">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
@@ -151,7 +151,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
               
               <div className="space-y-2">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[11px] font-bold uppercase rounded-full">
-                  <ShieldCheck className="w-3.5 h-3.5" /> Deviz Gratuit ANRE
+                  <ShieldCheck className="w-3.5 h-3.5" /> Deviz Gratuit
                 </span>
                 <h3 className="text-xl font-extrabold text-white">
                   Cere o Ofertă Rapidă

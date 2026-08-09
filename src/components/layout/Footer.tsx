@@ -38,14 +38,14 @@ export default function Footer() {
             </Link>
 
             <p className="text-slate-400 text-sm leading-relaxed pr-4">
-              Instalator autorizat ANRE de sisteme fotovoltaice rezidențiale, comerciale și bancuri de baterii de stocare de înaltă eficiență. Soluții cheie la cheie în toată România.
+              Montaj panouri solare și baterii / bancuri de stocare pentru sisteme rezidențiale și comerciale. Soluții la cheie în Vestul României și proiecte mari în toată țara.
             </p>
 
             <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-3">
               <ShieldCheck className="w-8 h-8 text-amber-400 shrink-0" />
               <div className="text-xs">
-                <div className="font-bold text-white">Certificat &amp; Autorizat ANRE</div>
-                <div className="text-slate-400">{companyData.anreCertificate}</div>
+                <div className="font-bold text-white">Garanție pe Echipamente &amp; Montaj</div>
+                <div className="text-slate-400">Garanție producător pentru echipamente și garanție pe manoperă</div>
               </div>
             </div>
 

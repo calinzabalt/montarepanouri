@@ -22,7 +22,7 @@ export default function StepQuoteForm() {
   const [formData, setFormData] = useState({
     propertyType: "Casă / Vilă",
     roofType: "Țiglă Ceramică / Metalică",
-    wantBatteries: "Da, doresc stocare pe baterie LiFePO4",
+    wantBatteries: "Da, doresc stocare pe baterie / banc de stocare",
     monthlyBill: "500 - 1000 lei / lună",
     name: "",
     phone: "",
@@ -58,7 +58,7 @@ export default function StepQuoteForm() {
           <div>Proprietate: <strong className="text-white">{formData.propertyType}</strong></div>
         </div>
         <p className="text-xs text-slate-400">
-          Un tehnician autorizat ANRE revine telefonic în maxim 30 de minute cu devizul complet de montaj la cheie.
+          Un tehnician revine telefonic în maxim 30 de minute cu devizul complet de montaj la cheie.
         </p>
       </div>
     );
@@ -154,12 +154,12 @@ export default function StepQuoteForm() {
         {/* Step 3: Battery Storage */}
         {currentStep === 3 && (
           <div className="space-y-6 animate-fadeIn">
-            <h3 className="text-xl font-bold text-white">3. Doriți și acumulatori de stocare (Baterii LiFePO4)?</h3>
+            <h3 className="text-xl font-bold text-white">3. Doriți și baterii / banc de stocare?</h3>
             <div className="space-y-3">
               {[
-                "Da, doresc stocare pe baterie LiFePO4 (Autonomie &amp; Backup UPS)",
+                "Da, doresc baterii / banc de stocare (autonomie &amp; backup)",
                 "Nu, doresc doar montaj panouri solare",
-                "Doresc recomandare tehnică de la un inginer",
+                "Doresc recomandare tehnică",
               ].map((opt) => {
                 const selected = formData.wantBatteries === opt;
                 return (

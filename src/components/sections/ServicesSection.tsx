@@ -31,8 +31,8 @@ interface ServicesSectionProps {
 
 export default function ServicesSection({
   services = defaultServices,
-  title = "Gama Noastră de Servicii Fotovoltaice",
-  subtitle = "Soluții personalizate de la mici instalații rezidențiale până la mari proiecte comerciale și sisteme de stocare de înaltă autonomie.",
+  title = "Gama Noastră de Servicii",
+  subtitle = "Montaj panouri solare pe acoperiș, baterii / bancuri de stocare și verificări tehnice pe teren.",
 }: ServicesSectionProps) {
   const getIcon = (iconName: string) => {
     switch (iconName) {
@@ -56,7 +56,7 @@ export default function ServicesSection({
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
           <span className="px-3.5 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold uppercase tracking-wider rounded-full inline-block">
-            Servicii Autorizate ANRE
+            Servicii Montaj Solar
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
             {title}
@@ -116,7 +116,7 @@ export default function ServicesSection({
               </div>
 
               {/* Footer CTA */}
-              <div className="p-6 pt-0 border-t border-slate-800/60 mt-4 flex items-center justify-between">
+              <div className="px-6 py-5 border-t border-slate-800/60 mt-2 flex items-center justify-between gap-4">
                 <div className="text-xs text-slate-400">
                   <span className="font-semibold text-emerald-400">{service.specs[0]?.label}: </span>
                   <span>{service.specs[0]?.value}</span>
@@ -124,7 +124,7 @@ export default function ServicesSection({
 
                 <Link
                   href={`/servicii/${service.slug}`}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600/20 hover:bg-emerald-600 text-emerald-400 hover:text-white font-semibold text-xs rounded-xl border border-emerald-500/30 transition-all group/btn"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600/20 hover:bg-emerald-600 text-emerald-400 hover:text-white font-semibold text-xs rounded-xl border border-emerald-500/30 transition-all group/btn shrink-0"
                 >
                   <span>Vezi Detalii Serviciu</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />

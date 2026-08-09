@@ -8,12 +8,12 @@ import companyData from "@/data/company.json";
 export const metadata = {
   title: "Cere Ofertă Fotovoltaică & Stocare Gratuită",
   description:
-    "Solicită o evaluare gratuită și o ofertă personalizată pentru sistemul tău fotovoltaic. Echipă autorizată ANRE, garanție 25 ani și dosar prosumator inclus.",
+    "Solicită o evaluare gratuită și o ofertă personalizată pentru montaj panouri solare și baterii / bancuri de stocare.",
 };
 
 export default function CereOfertaPage() {
   return (
-    <div className="pt-28 bg-slate-950 min-h-screen text-slate-200">
+    <div className="bg-slate-950 min-h-screen text-slate-200">
       
       {/* Header Landing */}
       <div className="py-12 bg-slate-900/60 border-b border-slate-800 text-center">
@@ -39,7 +39,7 @@ export default function CereOfertaPage() {
               <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Răspuns rapid în 30 min
             </span>
             <span className="flex items-center gap-1 text-slate-200">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Dosar prosumator inclus
+              <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Garanție pe echipamente
             </span>
           </div>
         </div>

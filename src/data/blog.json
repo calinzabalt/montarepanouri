@@ -10,12 +10,12 @@
     "author": "Adrian",
     "authorRole": "Specialist Sisteme Stocare",
     "image": "/images/baterii-stocare.jpg",
-    "excerpt": "Află cum calculezi capacitatea necesară a bateriei (kWh), diferențele dintre acumulatoarele LiFePO4 și cele pe litiu clasic, precum și criteriile esențiale pentru obținerea independenței energetice.",
+    "excerpt": "Află cum calculezi capacitatea necesară a bateriei (kWh), ce tipuri de baterii / bancuri de stocare există și care sunt criteriile esențiale pentru independență energetică.",
     "content": [
       "Stocarea energiei fotovoltaice a devenit cea mai eficientă cale de protecție împotriva penei de curent și a variațiilor tarifare. O baterie adecvată îți garantează energie 24/7.",
-      "### 1. De ce tehnologia LiFePO4 (Litiu Fier Fosfat) este standardul de aur?",
-      "Spre deosebire de acumulatoarele vechi pe plumb-acid sau litiu-ion NCM utilizate la telefoane, bateriile LiFePO4 oferă peste 6.000 de cicluri complete de încărcare/descărcare. Acest lucru înseamnă o durată de funcționare de peste 15 ani fără o degradare semnificativă.",
-      "Principalele avantaje LiFePO4 include: Stabilitate termică excepțională (fără risc de aprindere), adâncime de descărcare DoD de 90-95% și randament de conversie de peste 96%.",
+      "### 1. De ce merită un banc de stocare?",
+      "Un sistem de baterii bine dimensionat îți permite să folosești energia produsă ziua și noaptea, să reduci factura și să ai backup când pică rețeaua.",
+      "Avantaje tipice: autonomie mai mare, consum din producție proprie și protecție la pene de curent pentru aparatele esențiale din casă.",
       "### 2. Cum calculezi capacitatea de stocare necesară?",
       "Regula generală de dimensionare pentru un sistem rezidențial este raportul de 1.2x - 1.5x între puterea panourilor în kW și capacitatea bateriei în kWh. De exemplu:",
       "- Pentru panouri de 5kWp -> Baterie recomandată de 5kWh - 7.5kWh",
@@ -24,7 +24,7 @@
       "### 3. Tensiune Joasă (Low Voltage) vs. Tensiune Înaltă (High Voltage)",
       "Bategoriile de 48V (LV) sunt ideale pentru sisteme de mică dimensiune monofazate (până la 6kW), oferind un cost accesibil. În schimb, sistemele de înaltă tensiune (HV, 150V - 600V) conectate pe invertoare trifazate asigură randamente superioare și pierderi minime prin căldură.",
       "### Concluzie",
-      "Investiția într-un acumulator cu baterii LiFePO4 îți asigură consumul pe parcursul nopții și îți protejează electronicele valoroase din casă. La MontarePanouri.ro executăm montaj la cheie în Arad, Timișoara și în toată țara pentru proiecte mari cu stocare."
+      "Investiția într-un banc de stocare îți asigură consumul pe parcursul nopții și îți protejează electronicele din casă. La MontarePanouri.ro executăm montaj panouri solare și baterii la cheie în Arad, Timișoara și în toată țara pentru proiecte mari cu stocare."
     ]
   },
   {
@@ -38,7 +38,7 @@
     "author": "Adrian",
     "authorRole": "Consultant Proiecte Solare",
     "image": "/images/panouri-acoperis.jpg",
-    "excerpt": "Află de ce montajul tehnic autorizat ANRE este crucial pentru siguranța acoperișului tău și cum deservim eficient județele Timiș, Arad, Bihor, Caraș-Severin și Hunedoara.",
+    "excerpt": "Află de ce montajul panourilor solare și al bateriilor contează pentru siguranța acoperișului tău și cum deservim județele Timiș, Arad, Bihor, Caraș-Severin și Hunedoara.",
     "content": [
       "Un sistem fotovoltaic performant depinde în proporție de 80% de calitatea montajului fizic și electric.",
       "### De ce este esențial montajul la cheie executat de specialiști?",
@@ -87,7 +87,7 @@
       "Funcționează doar când rețeaua națională este activă. Dacă apare o pană de curent, invertorul se oprește automat din motive de siguranță.",
       "### Invertor Hibrid Modern",
       "Gestionază simultan panourile, bateriile și rețeaua. În caz de pană de curent, trece instantaneu în modul Backup/EPS, alimentând consumatorii prioritari din locuință fără nicio întrerupere simțită.",
-      "Recomandarea noastră actuală este alegerea unui invertor hibrid de la început, pregătit pentru conectare directă a bancului de baterii LiFePO4."
+      "Recomandarea noastră actuală este alegerea unui invertor hibrid de la început, pregătit pentru conectarea unui banc de stocare."
     ]
   }
 ]

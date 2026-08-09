@@ -28,8 +28,8 @@ interface GallerySectionProps {
 
 export default function GallerySection({
   projects = defaultProjects,
-  title = "Portofoliu Proiecte & Lucrări Executate",
-  subtitle = "Descoperă imagini reale de la montajele noastre: invertoare hibride, tablori DC/AC, bancuri de baterii LiFePO4 și panouri fotovoltaice pe acoperișuri.",
+  title = "Lucrări de Montaj Panouri Solare & Stocare",
+  subtitle = "Imagini reale de pe teren: panouri pe acoperiș, invertoare și baterii / bancuri de stocare.",
   showFilters = true,
   limit,
 }: GallerySectionProps) {
@@ -37,10 +37,9 @@ export default function GallerySection({
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   const categories = [
-    { id: "toate", label: "Toate Proiectele" },
-    { id: "rezidential", label: "Rezidențial" },
-    { id: "baterii", label: "Sisteme cu Baterii" },
-    { id: "comercial", label: "Comercial" },
+    { id: "toate", label: "Toate" },
+    { id: "rezidential", label: "Panouri pe acoperiș" },
+    { id: "baterii", label: "Baterii & stocare" },
   ];
 
   const filteredProjects = activeTab === "toate"
@@ -52,11 +51,9 @@ export default function GallerySection({
   return (
     <section className="py-28 sm:py-32 bg-[#080F1A] relative">
       <div className="max-w-7xl mx-auto px-6">
-        
-        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
           <span className="px-3.5 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider rounded-full inline-block">
-            Imagini Reale din Teren
+            Imagini din Teren
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
             {title}
@@ -66,7 +63,6 @@ export default function GallerySection({
           </p>
         </div>
 
-        {/* Filter Buttons */}
         {showFilters && (
           <div className="flex flex-wrap items-center justify-center gap-2.5 mb-12">
             {categories.map((cat) => (
@@ -85,7 +81,6 @@ export default function GallerySection({
           </div>
         )}
 
-        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {displayedProjects.map((proj) => (
             <div
@@ -93,7 +88,6 @@ export default function GallerySection({
               className="glass-card rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between group"
             >
               <div>
-                {/* Image Box */}
                 <div className="relative h-60 w-full overflow-hidden bg-slate-900">
                   <Image
                     src={proj.image}
@@ -104,12 +98,10 @@ export default function GallerySection({
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
 
-                  {/* Top Category Badge */}
                   <span className="absolute top-3 left-3 px-3 py-1 bg-slate-950/80 backdrop-blur-md border border-slate-800 rounded-lg text-emerald-400 text-[11px] font-bold">
                     {proj.categoryLabel}
                   </span>
 
-                  {/* Zoom Lightbox Trigger Button */}
                   <button
                     onClick={() => setSelectedImage({ src: proj.image, alt: proj.title })}
                     className="absolute top-3 right-3 p-2 bg-slate-900/80 hover:bg-emerald-600 text-white rounded-lg opacity-0 group-hover:opacity-100 transition-all transform scale-90 group-hover:scale-100 shadow-md"
@@ -118,7 +110,6 @@ export default function GallerySection({
                     <Maximize2 className="w-4 h-4" />
                   </button>
 
-                  {/* Capacity tag overlay */}
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white">
                     <span className="flex items-center gap-1 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-md border border-slate-800 font-semibold text-amber-400">
                       <Zap className="w-3.5 h-3.5" /> {proj.capacity}
@@ -126,7 +117,6 @@ export default function GallerySection({
                   </div>
                 </div>
 
-                {/* Content Details */}
                 <div className="p-5 space-y-3">
                   <div className="flex items-center gap-1.5 text-xs text-slate-400 font-medium">
                     <MapPin className="w-3.5 h-3.5 text-emerald-400" />
@@ -143,7 +133,7 @@ export default function GallerySection({
                 </div>
               </div>
 
-              <div className="p-5 pt-0 border-t border-slate-800/60 mt-2 flex items-center justify-between text-xs">
+              <div className="px-5 py-4 border-t border-slate-800/60 mt-2 flex items-center justify-between text-xs">
                 <button
                   onClick={() => setSelectedImage({ src: proj.image, alt: proj.title })}
                   className="text-emerald-400 hover:text-emerald-300 font-medium flex items-center gap-1"
@@ -156,7 +146,6 @@ export default function GallerySection({
           ))}
         </div>
 
-        {/* View All Projects Button */}
         {limit && (
           <div className="text-center mt-12">
             <Link
@@ -168,10 +157,8 @@ export default function GallerySection({
             </Link>
           </div>
         )}
-
       </div>
 
-      {/* Lightbox Modal */}
       {selectedImage && (
         <ImageLightbox
           isOpen={!!selectedImage}

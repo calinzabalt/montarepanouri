@@ -7,12 +7,12 @@
   {
     "id": "faq-2",
     "question": "Vă ocupați de întocmirea dosarului de prosumator?",
-    "answer": "Compania noastră se focusează exclusiv pe executarea la cheie a părții tehnice: montaj fizic panouri pe acoperiș, instalare invertoare, conectare bancuri de baterii LiFePO4 și tablou de protecții DC/AC. Nu realizăm dosare de prosumator, dar vă punem la dispoziție buletinele de încercare tehnică PRAM și fișele echipamentelor."
+    "answer": "Compania noastră se focusează exclusiv pe executarea la cheie a părții tehnice: montaj fizic panouri pe acoperiș, instalare invertoare, conectare bancuri de stocare și tablou de protecții DC/AC. Nu realizăm dosare de prosumator, dar vă punem la dispoziție documentele tehnice și fișele echipamentelor."
   },
   {
     "id": "faq-3",
-    "question": "Sunteți autorizați ANRE?",
-    "answer": "Da! Deținem atestat ANRE de Tip C1A și C2A pentru lucrări și instalații electrice. Fiecare sistem este montat conform normativelor în vigoare de către electricieni și ingineri autorizați."
+    "question": "Ce tip de lucrări realizați?",
+    "answer": "Ne ocupăm de montajul panourilor solare și al bateriilor / bancurilor de stocare: structură pe acoperiș, panouri, invertor, tablou electric și conectare. Lucrăm la cheie, cu accent pe siguranță și randament."
   },
   {
     "id": "faq-4",
@@ -21,12 +21,12 @@
   },
   {
     "id": "faq-5",
-    "question": "Ce garanție oferii pentru montaj și echipamente?",
-    "answer": "Oferim 25 ani garanție de eficiență liniară pentru panourile Tier 1, 10 ani garanție pentru invertoarele hibride, 10 ani (peste 6000 cicluri) pentru bateriile LiFePO4 și 5 ani garanție directă pe manopera de montaj."
+    "question": "Ce garanție oferiți pentru montaj și echipamente?",
+    "answer": "Echipamentele (panouri, invertoare, baterii) beneficiază de garanția acordată de producători. Pe manopera de montaj oferim garanție directă din partea noastră, detaliată în contract."
   },
   {
     "id": "faq-6",
     "question": "Puteți adăuga baterii de stocare la un sistem fotovoltaic deja existent?",
-    "answer": "Da! Adăugarea de acumulatori LiFePO4 și invertoare hibride/retrofit este una dintre specializările noastre principale. Instalăm baterii la cheie atât în zona Arad/Timișoara, cât și la nivel național."
+    "answer": "Da! Adăugarea de baterii / bancuri de stocare și invertoare hibride/retrofit este una dintre specializările noastre principale. Instalăm la cheie atât în zona Arad/Timișoara, cât și la nivel național pentru proiecte mai mari."
   }
 ]

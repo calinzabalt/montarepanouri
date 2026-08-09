@@ -18,26 +18,26 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://montarepanouri.ro"),
   title: {
-    default: "MontarePanouri.ro | Montaj Panouri Fotovoltaice & Baterii Autorizat ANRE",
+    default: "MontarePanouri.ro | Montaj Panouri Solare & Baterii / Bancuri de Stocare",
     template: "%s | MontarePanouri.ro",
   },
   description:
-    "Instalator autorizat ANRE pentru panouri fotovoltaice rezidențiale, industriale și bancuri de baterii de stocare LiFePO4. Montaj la cheie în zona Arad, Timișoara și Vestul României.",
+    "Montaj panouri solare și baterii / bancuri de stocare la cheie. Sisteme rezidențiale și comerciale în Arad, Timișoara și Vestul României.",
   keywords: [
+    "montaj panouri solare",
     "montaj panouri fotovoltaice",
-    "fotovoltaice romania",
-    "baterii stocare fotovoltaice",
-    "baterii lifepo4",
-    "dosar prosumator anre",
-    "panouri solare bucuresti",
+    "baterii stocare",
+    "bancuri de stocare",
+    "panouri solare Arad",
+    "panouri solare Timișoara",
     "sisteme hibrid fotovoltaice",
     "pret panouri fotovoltaice",
   ],
   authors: [{ name: companyData.name }],
   openGraph: {
-    title: "MontarePanouri.ro | Sisteme Fotovoltaice & Stocare Baterii",
+    title: "MontarePanouri.ro | Montaj Panouri Solare & Baterii",
     description:
-      "Transformă-ți acoperișul într-o sursă proprie de energie. Echipă autorizată ANRE, 25 ani garanție și dosar prosumator gratuit.",
+      "Transformă-ți acoperișul într-o sursă proprie de energie. Montaj panouri solare și baterii / bancuri de stocare, cu garanție pe echipamente și manoperă.",
     url: "https://montarepanouri.ro",
     siteName: "MontarePanouri.ro",
     locale: "ro_RO",

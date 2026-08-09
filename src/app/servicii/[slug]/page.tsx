@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps) {
   if (!service) return { title: "Serviciu Negăsit" };
 
   return {
-    title: `${service.title} | Autorizat ANRE`,
+    title: `${service.title} | Montaj la Cheie`,
     description: service.shortDescription,
     openGraph: {
       title: `${service.title} - MontarePanouri.ro`,
@@ -57,7 +57,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
   };
 
   return (
-    <div className="pt-28 bg-slate-950 min-h-screen text-slate-200">
+    <div className="bg-slate-950 min-h-screen text-slate-200">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -71,7 +71,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             <div className="lg:col-span-7 space-y-6">
               <span className="px-3.5 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider rounded-full inline-block">
                 <ShieldCheck className="w-3.5 h-3.5 inline mr-1 text-amber-400" />
-                Serviciu Autorizat ANRE
+                Montaj Panouri &amp; Baterii
               </span>
 
               <h1 className="text-3xl sm:text-5xl font-black text-white leading-tight">

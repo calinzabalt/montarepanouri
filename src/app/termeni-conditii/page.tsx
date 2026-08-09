@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="py-12 sm:py-14 pb-20 bg-slate-950 min-h-screen text-slate-300">
+    <div className="pb-20 bg-slate-950 min-h-screen text-slate-300">
       <div className="max-w-4xl mx-auto px-4 space-y-8">
         
         <div className="border-b border-slate-800 pb-6 space-y-2">
@@ -28,7 +28,7 @@ export default function TermsPage() {
           <section className="space-y-2">
             <h2 className="text-xl font-bold text-white">2. Servicii și Oferte Tehnic</h2>
             <p>
-              Informațiile prezentate pe site au caracter informativ. Estimările de pret și configurările de sistem devin ferme numai în urma verificării tehnice de către un inginer autorizat ANRE și semnárii contractului de prestări servicii.
+              Informațiile prezentate pe site au caracter informativ. Estimările de pret și configurările de sistem devin ferme numai în urma verificării tehnice pe teren și semnării contractului de prestări servicii.
             </p>
           </section>
 

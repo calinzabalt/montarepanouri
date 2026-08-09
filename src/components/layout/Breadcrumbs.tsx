@@ -87,32 +87,39 @@ export default function Breadcrumbs({ blogEntries, serviceEntries }: Breadcrumbs
   return (
     <nav
       aria-label="Breadcrumb"
-      className="relative z-30 mt-[106px] sm:mt-[112px] border-b border-white/[0.06] bg-slate-950/95 backdrop-blur"
+      className="relative z-30 mt-[106px] sm:mt-[112px] bg-[#080F1A]"
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-6 pt-1.5 pb-1 sm:pt-1.5 sm:pb-1 overflow-x-auto">
-        <ol className="flex items-center gap-2 text-[11px] sm:text-xs whitespace-nowrap">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 overflow-x-auto">
+        <ol className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.06] bg-white/[0.03] px-3.5 py-1.5 text-[11px] sm:text-xs whitespace-nowrap">
           {items.map((item, index) => {
             const isLast = index === items.length - 1;
 
             return (
-              <li key={item.href} className="flex items-center gap-2 min-w-0">
+              <li key={item.href} className="flex items-center gap-1.5 min-w-0">
                 {index === 0 ? (
-                  <Home className="w-3.5 h-3.5 text-slate-500" aria-hidden="true" />
-                ) : null}
-
-                {isLast ? (
-                  <span className="font-semibold text-emerald-400 truncate">{item.label}</span>
+                  <Link
+                    href={item.href}
+                    className="inline-flex items-center gap-1.5 text-slate-400 hover:text-emerald-400 transition-colors"
+                    aria-label={item.label}
+                  >
+                    <Home className="w-3.5 h-3.5" aria-hidden="true" />
+                    <span className="hidden sm:inline">{item.label}</span>
+                  </Link>
+                ) : isLast ? (
+                  <span className="font-semibold text-emerald-400 truncate max-w-[42vw] sm:max-w-md">
+                    {item.label}
+                  </span>
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-slate-400 hover:text-white transition-colors truncate"
+                    className="text-slate-400 hover:text-white transition-colors truncate max-w-[28vw] sm:max-w-xs"
                   >
                     {item.label}
                   </Link>
                 )}
 
                 {!isLast ? (
-                  <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" aria-hidden="true" />
+                  <ChevronRight className="w-3 h-3 text-slate-600 shrink-0" aria-hidden="true" />
                 ) : null}
               </li>
             );

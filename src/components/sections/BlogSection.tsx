@@ -57,15 +57,15 @@ export default function BlogSection({
         {/* Highlighted Article Card */}
         {highlightedArticle && (
           <div className="mb-14 glass-card rounded-3xl overflow-hidden border border-slate-800 grid grid-cols-1 lg:grid-cols-12 group">
-            <div className="lg:col-span-6 relative h-64 sm:h-80 lg:h-auto min-h-[280px]">
+            <div className="lg:col-span-6 relative h-56 sm:h-64 lg:h-full min-h-[220px] lg:min-h-[280px]">
               <Image
                 src={highlightedArticle.image}
                 alt={highlightedArticle.title}
-                width={1400}
-                height={900}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute top-4 left-4 px-3 py-1 bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider rounded-lg shadow-lg">
+              <div className="absolute top-4 left-4 z-10 px-3 py-1 bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider rounded-lg shadow-lg">
                 Articol Recomandat
               </div>
             </div>

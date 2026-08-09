@@ -13,8 +13,8 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({
-  title = "Montaj Panouri Fotovoltaice & Baterii la Cheie",
-  subtitle = "Specializați pe instalarea fizică și conectarea electrică a panourilor solare și bancurilor de stocare LiFePO4. Deservim prioritar Arad, Timișoara și Vestul României.",
+  title = "Montaj Panouri Solare & Baterii la Cheie",
+  subtitle = "Specializați pe montajul panourilor solare și al bateriilor / bancurilor de stocare. Deservim prioritar Arad, Timișoara și Vestul României.",
   badgeText = "Montaj la Cheie · Panouri + Baterii",
   imageSrc = "/images/montaj-fotovoltaice-rezidential.jpg",
 }: HeroSectionProps) {
@@ -68,8 +68,8 @@ export default function HeroSection({
             <div className="flex flex-col sm:flex-row gap-3">
               {[
                 { icon: CheckCircle2, color: "text-emerald-400", label: "Montaj fizic la cheie" },
-                { icon: CheckCircle2, color: "text-amber-400", label: "25 ani garanție echipamente" },
-                { icon: CheckCircle2, color: "text-teal-400", label: "Autorizat ANRE C1A/C2A" },
+                { icon: CheckCircle2, color: "text-amber-400", label: "Garanție pe echipamente" },
+                { icon: CheckCircle2, color: "text-teal-400", label: "Panouri + baterii / stocare" },
               ].map(({ icon: Icon, color, label }) => (
                 <div
                   key={label}
@@ -114,10 +114,10 @@ export default function HeroSection({
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs">
                 <span className="flex items-center gap-2 bg-[#080F1A]/90 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-white/[0.08] text-slate-300">
                   <Zap className="w-3.5 h-3.5 text-amber-400" />
-                  Sistem Fotovoltaic + Baterie LiFePO4
+                  Sistem Fotovoltaic + Baterie
                 </span>
                 <span className="px-2.5 py-1 bg-emerald-500/20 text-emerald-400 font-bold rounded-lg">
-                  ANRE
+                  La cheie
                 </span>
               </div>
             </div>

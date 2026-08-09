@@ -5,12 +5,12 @@ import QuoteFormSection from "@/components/sections/QuoteFormSection";
 export const metadata = {
   title: "Blog & Ghiduri Tehnice Panouri Fotovoltaice",
   description:
-    "Articole specializate despre alegerea bateriilor LiFePO4, obținerea statutului de prosumator, curățare panouri și legislația fotovoltaică.",
+    "Articole despre alegerea bateriilor / bancurilor de stocare, curățarea panourilor și sfaturi practice pentru sisteme solare.",
 };
 
 export default function BlogPage() {
   return (
-    <div className="pt-24 bg-slate-950 min-h-screen">
+    <div className="bg-slate-950 min-h-screen">
       <div className="py-16 border-b border-slate-800 text-center bg-slate-900/60">
         <div className="max-w-4xl mx-auto px-4 space-y-4">
           <span className="px-3.5 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider rounded-full inline-block">

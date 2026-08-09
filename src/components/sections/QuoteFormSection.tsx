@@ -20,7 +20,7 @@ export default function QuoteFormSection({
     county: "Timiș (Timișoara)",
     propertyType: "Casă / Vilă",
     roofType: "Țiglă Ceramică / Metalică",
-    batteryOption: "Da, vreau și stocare pe baterie LiFePO4",
+    batteryOption: "Da, vreau și baterii / banc de stocare",
     monthlyBill: "500 - 1000 lei/lună",
     notes: "",
   });
@@ -161,7 +161,7 @@ export default function QuoteFormSection({
                     onChange={(e) => setFormData({ ...formData, batteryOption: e.target.value })}
                     className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white text-sm focus:outline-none focus:border-emerald-500"
                   >
-                    <option value="Da, vreau și stocare pe baterie LiFePO4">Da, vreau și baterii</option>
+                    <option value="Da, vreau și baterii / banc de stocare">Da, vreau și baterii</option>
                     <option value="Doar panouri (On-Grid)">Doar panouri (On-Grid)</option>
                     <option value="Doresc recomandare tehnică">Doresc recomandare</option>
                   </select>

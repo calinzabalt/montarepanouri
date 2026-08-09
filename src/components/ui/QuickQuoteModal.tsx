@@ -161,7 +161,7 @@ export default function QuickQuoteModal({
                 </label>
                 <textarea
                   rows={2}
-                  placeholder="Ex: Suprafață acoperiș, dorință acumulatori LiFePO4..."
+                  placeholder="Ex: Suprafață acoperiș, dorință baterii / banc de stocare..."
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                   className="w-full px-4 py-2.5 bg-slate-800/80 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 text-sm"

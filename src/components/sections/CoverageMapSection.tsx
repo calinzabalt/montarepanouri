@@ -46,7 +46,7 @@ export default function CoverageMapSection({
                 <BatteryCharging className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                 <div className="text-xs">
                   <div className="font-bold text-white">Național: Proiecte Mari cu Baterii</div>
-                  <div className="text-slate-400">Ne deplasăm în orice județ din țară pentru instalații mari care includ acumulatori LiFePO4.</div>
+                  <div className="text-slate-400">Ne deplasăm în orice județ din țară pentru instalații mari care includ baterii / bancuri de stocare.</div>
                 </div>
               </div>
 
