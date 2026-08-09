@@ -22,6 +22,7 @@ interface GallerySectionProps {
   projects?: ProjectItem[];
   title?: string;
   subtitle?: string;
+  showHeader?: boolean;
   showFilters?: boolean;
   limit?: number;
 }
@@ -30,6 +31,7 @@ export default function GallerySection({
   projects = defaultProjects,
   title = "Lucrări de Montaj Panouri Solare & Stocare",
   subtitle = "Imagini reale de pe teren: panouri pe acoperiș, invertoare și baterii / bancuri de stocare.",
+  showHeader = true,
   showFilters = true,
   limit,
 }: GallerySectionProps) {
@@ -49,19 +51,21 @@ export default function GallerySection({
   const displayedProjects = limit ? filteredProjects.slice(0, limit) : filteredProjects;
 
   return (
-    <section className="py-28 sm:py-32 bg-[#080F1A] relative">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <span className="px-3.5 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider rounded-full inline-block">
-            Imagini din Teren
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-            {title}
-          </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            {subtitle}
-          </p>
-        </div>
+    <section className={`${showHeader ? "py-16 sm:py-24 lg:py-32" : "py-10 sm:py-14"} bg-[#080F1A] relative`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        {showHeader ? (
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-3">
+            <span className="px-3.5 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider rounded-full inline-block">
+              Imagini din Teren
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">
+              {title}
+            </h2>
+            <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+              {subtitle}
+            </p>
+          </div>
+        ) : null}
 
         {showFilters && (
           <div className="flex flex-wrap items-center justify-center gap-2.5 mb-12">

@@ -16,13 +16,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://montarepanouri.ro"),
+  metadataBase: new URL(companyData.website),
   title: {
-    default: "MontarePanouri.ro | Montaj Panouri Solare & Baterii / Bancuri de Stocare",
+    default: "Montaj Panouri Solare & Baterii la Cheie | MontarePanouri.ro",
     template: "%s | MontarePanouri.ro",
   },
-  description:
-    "Montaj panouri solare și baterii / bancuri de stocare la cheie. Sisteme rezidențiale și comerciale în Arad, Timișoara și Vestul României.",
+  description: companyData.description,
   keywords: [
     "montaj panouri solare",
     "montaj panouri fotovoltaice",
@@ -30,18 +29,34 @@ export const metadata: Metadata = {
     "bancuri de stocare",
     "panouri solare Arad",
     "panouri solare Timișoara",
+    "montaj panouri Vest România",
     "sisteme hibrid fotovoltaice",
-    "pret panouri fotovoltaice",
   ],
   authors: [{ name: companyData.name }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "MontarePanouri.ro | Montaj Panouri Solare & Baterii",
-    description:
-      "Transformă-ți acoperișul într-o sursă proprie de energie. Montaj panouri solare și baterii / bancuri de stocare, cu garanție pe echipamente și manoperă.",
-    url: "https://montarepanouri.ro",
-    siteName: "MontarePanouri.ro",
+    title: "Montaj Panouri Solare & Baterii la Cheie | MontarePanouri.ro",
+    description: companyData.description,
+    url: companyData.website,
+    siteName: companyData.name,
     locale: "ro_RO",
     type: "website",
+    images: [
+      {
+        url: "/images/panouri-pe-acoperis-tila.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Montaj panouri solare pe acoperiș",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Montaj Panouri Solare & Baterii | MontarePanouri.ro",
+    description: companyData.description,
+    images: ["/images/panouri-pe-acoperis-tila.jpg"],
   },
   robots: {
     index: true,
@@ -64,25 +79,59 @@ export default function RootLayout({
     title: entry.title,
   }));
 
-  // LocalBusiness Structured Schema Markup
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": companyData.name,
-    "image": "https://montarepanouri.ro/images/montaj-fotovoltaice-rezidential.jpg",
-    "telephone": companyData.phone,
-    "email": companyData.email,
-    "address": {
+    "@id": `${companyData.website}/#business`,
+    name: companyData.name,
+    legalName: companyData.legalName,
+    description: companyData.description,
+    url: companyData.website,
+    telephone: companyData.phone,
+    email: companyData.email,
+    image: `${companyData.website}/images/panouri-pe-acoperis-tila.jpg`,
+    logo: `${companyData.website}/icon.svg`,
+    priceRange: "$$",
+    areaServed: [
+      {
+        "@type": "AdministrativeArea",
+        name: "Vestul României",
+      },
+      ...companyData.primaryCities.map((city) => ({
+        "@type": "City",
+        name: city,
+      })),
+      {
+        "@type": "Country",
+        name: "Romania",
+      },
+    ],
+    address: {
       "@type": "PostalAddress",
-      "addressLocality": "București",
-      "addressCountry": "RO",
+      addressLocality: "Timișoara",
+      addressRegion: "Timiș",
+      addressCountry: "RO",
     },
-    "openingHours": "Mo-Fr 08:00-18:00",
-    "url": "https://montarepanouri.ro",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "18:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "09:00",
+        closes: "14:00",
+      },
+    ],
+    knowsAbout: companyData.servicesOffered,
+    sameAs: Object.values(companyData.socials),
   };
 
   return (
-    <html lang="ro" className="">
+    <html lang="ro">
       <head>
         <script
           type="application/ld+json"

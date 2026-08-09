@@ -27,17 +27,17 @@ export default function HeroSection({
   };
 
   return (
-    <section className="relative min-h-screen flex items-center pt-36 pb-24 overflow-hidden bg-[#080F1A]">
+    <section className="relative min-h-screen flex items-center pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden bg-[#080F1A]">
       {/* Ambient glows */}
       <div className="absolute top-1/3 -left-32 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-amber-500/08 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.07] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
 
           {/* ── Left ── */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-7 space-y-6 sm:space-y-8">
             {/* Badges */}
             <div className="flex flex-wrap items-center gap-2.5">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wide">
@@ -52,7 +52,7 @@ export default function HeroSection({
 
             {/* Headline */}
             <div className="space-y-3">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08]">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08]">
                 {title.split("&")[0].trim()}
                 <br />
                 <span className="gradient-text-emerald">
@@ -111,10 +111,10 @@ export default function HeroSection({
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#080F1A] via-transparent to-transparent" />
               </div>
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs">
+              <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 text-xs">
                 <span className="flex items-center gap-2 bg-[#080F1A]/90 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-white/[0.08] text-slate-300">
-                  <Zap className="w-3.5 h-3.5 text-amber-400" />
-                  Sistem Fotovoltaic + Baterie
+                  <Zap className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  Panouri + Baterie
                 </span>
                 <span className="px-2.5 py-1 bg-emerald-500/20 text-emerald-400 font-bold rounded-lg">
                   La cheie
@@ -123,7 +123,7 @@ export default function HeroSection({
             </div>
 
             {/* Mini form card */}
-            <div className="rounded-2xl bg-[#0D1727] border border-white/[0.08] p-6 shadow-xl relative overflow-hidden">
+            <div className="rounded-2xl bg-[#0D1727] border border-white/[0.08] p-4 sm:p-6 shadow-xl relative overflow-hidden">
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />
 
               <div className="relative z-10">
@@ -153,19 +153,19 @@ export default function HeroSection({
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full px-4 py-3 bg-[#080F1A] border border-white/[0.08] rounded-xl text-white placeholder-slate-600 text-sm focus:outline-none focus:border-emerald-500/50 transition-colors"
                     />
-                    <div className="grid grid-cols-2 gap-2.5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                       <input
                         type="tel"
                         required
                         placeholder="Telefon *"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="px-4 py-3 bg-[#080F1A] border border-white/[0.08] rounded-xl text-white placeholder-slate-600 text-sm focus:outline-none focus:border-emerald-500/50 transition-colors"
+                        className="w-full px-4 py-3 bg-[#080F1A] border border-white/[0.08] rounded-xl text-white placeholder-slate-600 text-sm focus:outline-none focus:border-emerald-500/50 transition-colors"
                       />
                       <select
                         value={formData.county}
                         onChange={(e) => setFormData({ ...formData, county: e.target.value })}
-                        className="px-3 py-3 bg-[#080F1A] border border-white/[0.08] rounded-xl text-white text-sm focus:outline-none focus:border-emerald-500/50 transition-colors"
+                        className="w-full px-3 py-3 bg-[#080F1A] border border-white/[0.08] rounded-xl text-white text-sm focus:outline-none focus:border-emerald-500/50 transition-colors"
                       >
                         <option value="Timiș (Timișoara)">Timiș</option>
                         <option value="Arad">Arad</option>

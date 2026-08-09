@@ -20,11 +20,16 @@ export async function generateMetadata({ params }: PageProps) {
   if (!article) return { title: "Articol Negăsit" };
 
   return {
-    title: `${article.title} | Blog MontarePanouri.ro`,
+    title: article.title,
     description: article.excerpt,
+    alternates: {
+      canonical: `/blog/${article.slug}`,
+    },
     openGraph: {
       title: article.title,
       description: article.excerpt,
+      url: `/blog/${article.slug}`,
+      type: "article",
       images: [article.image],
     },
   };
@@ -38,17 +43,25 @@ export default async function BlogArticlePage({ params }: PageProps) {
     notFound();
   }
 
-  // Schema article JSON-LD
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": article.title,
-    "image": [article.image],
-    "datePublished": "2026-02-15",
-    "author": {
+    headline: article.title,
+    description: article.excerpt,
+    image: [`https://montarepanouri.ro${article.image}`],
+    datePublished: article.dateIso,
+    dateModified: article.dateIso,
+    author: {
       "@type": "Person",
-      "name": article.author,
+      name: article.author,
+      jobTitle: article.authorRole,
     },
+    publisher: {
+      "@type": "Organization",
+      name: "MontarePanouri.ro",
+      url: "https://montarepanouri.ro",
+    },
+    mainEntityOfPage: `https://montarepanouri.ro/blog/${article.slug}`,
   };
 
   return (
@@ -147,7 +160,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
 
           {/* Sticky Sidebar Column: Quick Quote Request Form */}
           <aside className="lg:col-span-4 space-y-8">
-            <div className="sticky top-28 bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl space-y-6">
+            <div className="lg:sticky lg:top-32 bg-slate-900 border border-slate-800 rounded-2xl sm:rounded-3xl p-5 sm:p-6 shadow-2xl space-y-6">
               
               <div className="space-y-2">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[11px] font-bold uppercase rounded-full">

@@ -2,7 +2,9 @@ import React from "react";
 
 export const metadata = {
   title: "Politică de Cookie-uri",
-  description: "Informații privind utilizarea modulilor cookie pe site-ul MontarePanouri.ro.",
+  description:
+    "Informații despre cookie-urile folosite pe montarepanouri.ro și cum îți poți gestiona preferințele.",
+  alternates: { canonical: "/politica-cookies" },
 };
 
 export default function CookiePolicyPage() {

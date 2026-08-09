@@ -42,21 +42,21 @@ export default function FaqSection({
   };
 
   return (
-    <section className="py-28 sm:py-32 bg-slate-900/60 border-t border-white/[0.06] relative">
+    <section className="py-16 sm:py-24 lg:py-32 bg-slate-900/60 border-t border-white/[0.06] relative">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
         
         {/* Header */}
-        <div className="text-center mb-20 space-y-4">
+        <div className="text-center mb-10 sm:mb-16 lg:mb-20 space-y-4">
           <span className="px-3.5 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider rounded-full inline-block">
             <HelpCircle className="w-3.5 h-3.5 inline mr-1" />
             Răspunsuri la Nedumeriri
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">
             {title}
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">

@@ -2,7 +2,9 @@ import React from "react";
 
 export const metadata = {
   title: "Termeni și Condiții",
-  description: "Termenii și condițiile de utilizare a serviciilor și site-ului MontarePanouri.ro.",
+  description:
+    "Termenii de utilizare a site-ului și a serviciilor de montaj panouri solare și baterii oferite de MontarePanouri.ro.",
+  alternates: { canonical: "/termeni-conditii" },
 };
 
 export default function TermsPage() {
@@ -35,7 +37,7 @@ export default function TermsPage() {
           <section className="space-y-2">
             <h2 className="text-xl font-bold text-white">3. Garanții și Responsabilitate</h2>
             <p>
-              Echipamentele (panouri, invertoare, baterii) beneficiază de garanția acordată direct de producători. Manopera de montaj beneficiază de o garanție de 5 ani oferită de societatea noastră.
+              Echipamentele (panouri, invertoare, baterii) beneficiază de garanția acordată de producători. Manopera de montaj beneficiază de garanție oferită de societatea noastră, detaliată în contract.
             </p>
           </section>
 

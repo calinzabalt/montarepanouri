@@ -32,7 +32,7 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-900/30">
                 <Sun className="w-6 h-6 text-slate-950" />
               </div>
-              <span className="text-2xl font-black tracking-tight text-white">
+              <span className="text-xl sm:text-2xl font-black tracking-tight text-white">
                 MONTARE<span className="text-emerald-400">PANOURI</span>.ro
               </span>
             </Link>
@@ -136,10 +136,12 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
                 <span>{companyData.email}</span>
               </div>
-              <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
-                <span>{companyData.address}</span>
-              </div>
+              {companyData.showAddress ? (
+                <div className="flex items-start gap-2.5">
+                  <MapPin className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
+                  <span>{companyData.address}</span>
+                </div>
+              ) : null}
             </div>
 
             {/* ANPC Banners / Links */}
@@ -150,19 +152,19 @@ export default function Footer() {
                   href={companyData.legal.sal}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-3 py-2 bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-lg text-xs flex items-center justify-between text-slate-300 transition-colors"
+                  className="px-3 py-2 bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-lg text-xs flex items-center justify-between gap-2 text-slate-300 transition-colors"
                 >
-                  <span>ANPC - SAL (Soluționarea Alternativă)</span>
-                  <ExternalLink className="w-3 h-3 text-slate-400" />
+                  <span className="min-w-0">ANPC - SAL</span>
+                  <ExternalLink className="w-3 h-3 text-slate-400 shrink-0" />
                 </a>
                 <a
                   href={companyData.legal.sol}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-3 py-2 bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-lg text-xs flex items-center justify-between text-slate-300 transition-colors"
+                  className="px-3 py-2 bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-lg text-xs flex items-center justify-between gap-2 text-slate-300 transition-colors"
                 >
-                  <span>Platforma SOL (Online Dispute)</span>
-                  <ExternalLink className="w-3 h-3 text-slate-400" />
+                  <span className="min-w-0">Platforma SOL</span>
+                  <ExternalLink className="w-3 h-3 text-slate-400 shrink-0" />
                 </a>
               </div>
             </div>

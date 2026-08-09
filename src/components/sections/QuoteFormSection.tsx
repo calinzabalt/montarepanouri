@@ -33,21 +33,21 @@ export default function QuoteFormSection({
   };
 
   return (
-    <section id="formular-oferta" className="py-28 sm:py-32 bg-[#080F1A] relative overflow-hidden">
+    <section id="formular-oferta" className="py-16 sm:py-24 lg:py-32 bg-[#080F1A] relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 blur-[120px] pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
         
-        <div className="bg-slate-900/90 backdrop-blur-xl border border-white/[0.08] rounded-3xl p-10 sm:p-14 shadow-2xl">
+        <div className="bg-slate-900/90 backdrop-blur-xl border border-white/[0.08] rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-14 shadow-2xl">
           
           {/* Header */}
-          <div className="text-center max-w-2xl mx-auto mb-10 space-y-3">
-            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider rounded-full">
-              <ShieldCheck className="w-4 h-4 text-amber-400" />
-              Montaj la Cheie (Panouri + Baterii)
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 space-y-3">
+            <span className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-1.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider rounded-full">
+              <ShieldCheck className="w-4 h-4 text-amber-400 shrink-0" />
+              Montaj la Cheie
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">
               {title}
             </h2>
             <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
@@ -201,20 +201,20 @@ export default function QuoteFormSection({
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-4 px-8 bg-gradient-to-r from-emerald-500 via-teal-500 to-amber-500 hover:from-emerald-600 hover:to-amber-600 text-white font-extrabold text-base rounded-2xl shadow-xl shadow-emerald-950/60 transition-all flex items-center justify-center gap-2 group"
+                  className="w-full py-3.5 sm:py-4 px-4 sm:px-8 bg-gradient-to-r from-emerald-500 via-teal-500 to-amber-500 hover:from-emerald-600 hover:to-amber-600 text-white font-extrabold text-sm sm:text-base rounded-2xl shadow-xl shadow-emerald-950/60 transition-all flex flex-wrap items-center justify-center gap-2 group"
                 >
-                  <Zap className="w-5 h-5 text-amber-300 group-hover:scale-110 transition-transform" />
-                  <span>TRIMITE CEREREA PENTRU ESTIMARE MONTAJ</span>
-                  <Send className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
+                  <Zap className="w-5 h-5 text-amber-300 group-hover:scale-110 transition-transform shrink-0" />
+                  <span>Trimite cererea pentru estimare</span>
+                  <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform shrink-0" />
                 </button>
               </div>
 
-              <div className="flex flex-wrap items-center justify-between text-xs text-slate-400 pt-3 border-t border-slate-800/80">
+              <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between text-xs text-slate-400 pt-3 border-t border-slate-800/80">
                 <span className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                  Datele tale sunt protejate conform Regulamentului GDPR
+                  <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                  Date protejate conform GDPR
                 </span>
-                <span>Asistență telefonică rapidă: {companyData.phone}</span>
+                <span>Asistență: {companyData.phone}</span>
               </div>
             </form>
           )}

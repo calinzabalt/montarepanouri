@@ -44,11 +44,11 @@ export default function StepQuoteForm() {
 
   if (submitted) {
     return (
-      <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-12 text-center space-y-6 max-w-2xl mx-auto shadow-2xl">
-        <div className="w-20 h-20 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto border border-emerald-500/40">
-          <CheckCircle2 className="w-12 h-12" />
+      <div className="bg-slate-900 border border-slate-800 rounded-2xl sm:rounded-3xl p-5 sm:p-12 text-center space-y-6 max-w-2xl mx-auto shadow-2xl">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto border border-emerald-500/40">
+          <CheckCircle2 className="w-10 h-10 sm:w-12 sm:h-12" />
         </div>
-        <h3 className="text-3xl font-extrabold text-white">Solicitare Înregistrată cu Succes!</h3>
+        <h3 className="text-2xl sm:text-3xl font-extrabold text-white">Solicitare Înregistrată!</h3>
         <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
           Vă mulțumim, <span className="text-emerald-400 font-bold">{formData.name}</span>! Am preluat specificațiile pentru sistemul de la proprietatea din <span className="text-white font-bold">{formData.county}</span>.
         </p>
@@ -65,10 +65,10 @@ export default function StepQuoteForm() {
   }
 
   return (
-    <div className="bg-slate-900/90 backdrop-blur-xl border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl">
+    <div className="bg-slate-900/90 backdrop-blur-xl border border-slate-800 rounded-2xl sm:rounded-3xl p-4 sm:p-10 shadow-2xl">
       {/* Progress Bar Header */}
-      <div className="mb-8 space-y-3">
-        <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-400">
+      <div className="mb-6 sm:mb-8 space-y-3">
+        <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-bold uppercase tracking-wider text-slate-400">
           <span>Pasul {currentStep} din 5</span>
           <span className="text-emerald-400">
             {currentStep === 1 && "Tip Proprietate"}
@@ -313,24 +313,24 @@ export default function StepQuoteForm() {
         )}
 
         {/* Step Control Buttons */}
-        <div className="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
+        <div className="mt-8 pt-6 border-t border-slate-800 flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between">
           {currentStep > 1 ? (
             <button
               type="button"
               onClick={prevStep}
-              className="px-5 py-2.5 bg-slate-950 hover:bg-slate-800 text-slate-300 font-semibold text-xs rounded-xl border border-slate-800 flex items-center gap-1.5 transition-colors"
+              className="px-5 py-2.5 bg-slate-950 hover:bg-slate-800 text-slate-300 font-semibold text-xs rounded-xl border border-slate-800 inline-flex items-center justify-center gap-1.5 transition-colors w-full sm:w-auto"
             >
               <ArrowLeft className="w-4 h-4" /> Înapoi
             </button>
           ) : (
-            <div />
+            <div className="hidden sm:block" />
           )}
 
           {currentStep < 5 ? (
             <button
               type="button"
               onClick={nextStep}
-              className="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-lg flex items-center gap-1.5 transition-all"
+              className="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-lg inline-flex items-center justify-center gap-1.5 transition-all w-full sm:w-auto"
             >
               <span>Pasul Următor</span>
               <ArrowRight className="w-4 h-4" />
@@ -338,10 +338,10 @@ export default function StepQuoteForm() {
           ) : (
             <button
               type="submit"
-              className="px-8 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-black text-xs rounded-xl shadow-xl shadow-emerald-950/50 flex items-center gap-2"
+              className="px-6 sm:px-8 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-black text-xs rounded-xl shadow-xl shadow-emerald-950/50 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
             >
-              <ShieldCheck className="w-4 h-4 text-amber-300" />
-              <span>TRIMITE PENTRU ESTIMARE MONTAJ</span>
+              <ShieldCheck className="w-4 h-4 text-amber-300 shrink-0" />
+              <span>Trimite pentru estimare</span>
             </button>
           )}
         </div>

@@ -19,21 +19,21 @@ interface ProcessSectionProps {
 export default function ProcessSection({
   steps = defaultProcess,
   title = "Cum Funcționează (Pas cu Pas)",
-  subtitle = "Un proces simplu, transparent și fără stres pentru tine. De la prima discuție până la obținerea statutului oficial de prosumator.",
+  subtitle = "Un proces simplu și clar: de la cererea de ofertă până la montaj și punerea în funcțiune.",
 }: ProcessSectionProps) {
   return (
-    <section className="py-28 sm:py-32 bg-slate-900/80 border-y border-white/[0.06] relative overflow-hidden">
+    <section className="py-16 sm:py-24 lg:py-32 bg-slate-900/80 border-y border-white/[0.06] relative overflow-hidden">
       {/* Glow elements */}
       <div className="absolute top-1/2 left-0 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 lg:mb-20 space-y-4">
           <span className="px-3.5 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider rounded-full inline-block">
             Proces Simplificat
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">
             {title}
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
@@ -46,7 +46,7 @@ export default function ProcessSection({
           {steps.map((s, index) => (
             <div
               key={s.step}
-              className="glass-card rounded-2xl p-8 relative flex flex-col justify-between group border border-white/[0.06]"
+              className="glass-card rounded-2xl p-5 sm:p-8 relative flex flex-col justify-between group border border-white/[0.06]"
             >
               <div>
                 {/* Step Badge */}

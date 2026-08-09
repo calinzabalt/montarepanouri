@@ -20,7 +20,7 @@ import QuickQuoteModal from "@/components/ui/QuickQuoteModal";
 function Topbar() {
   return (
     <div className="bg-slate-950 border-b border-white/[0.05]">
-      <div className="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-center sm:justify-between gap-6 text-[11px] font-medium text-slate-400">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 flex flex-wrap items-center justify-center sm:justify-between gap-2 sm:gap-6 text-[11px] font-medium text-slate-400">
         <span className="inline-flex items-center gap-2">
           <Phone className="w-3.5 h-3.5 text-emerald-400" />
           {companyData.phone}
@@ -75,18 +75,18 @@ export default function Header() {
               : "bg-[#080F1A]/70 backdrop-blur-xl py-4"
           }`}
         >
-          <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-2 sm:gap-6">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group shrink-0">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-900/30 group-hover:scale-105 transition-transform">
+            <Link href="/" className="flex items-center gap-2 sm:gap-3 group min-w-0">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-900/30 group-hover:scale-105 transition-transform shrink-0">
                 <Sun className="w-5 h-5 text-slate-950" />
               </div>
-              <div className="flex flex-col leading-none">
-                <span className="text-base font-extrabold tracking-tight text-white group-hover:text-emerald-400 transition-colors">
+              <div className="flex flex-col leading-none min-w-0">
+                <span className="text-sm sm:text-base font-extrabold tracking-tight text-white group-hover:text-emerald-400 transition-colors truncate">
                   MONTARE<span className="text-emerald-400">PANOURI</span>
                   <span className="text-slate-500 font-light">.ro</span>
                 </span>
-                <span className="text-[9px] uppercase font-semibold tracking-[0.18em] text-slate-500 mt-0.5">
+                <span className="hidden min-[400px]:block text-[9px] uppercase font-semibold tracking-[0.18em] text-slate-500 mt-0.5">
                   Montaj Panouri &amp; Baterii la Cheie
                 </span>
               </div>
@@ -176,7 +176,7 @@ export default function Header() {
 
           {/* Mobile drawer */}
           {mobileMenuOpen && (
-            <div className="lg:hidden border-t border-white/[0.06] px-6 py-5 space-y-1 animate-fadeIn bg-[#0A1120]">
+            <div className="lg:hidden border-t border-white/[0.06] px-4 sm:px-6 py-5 space-y-1 animate-fadeIn bg-[#0A1120] max-h-[min(70vh,560px)] overflow-y-auto">
               {[
                 { href: "/", label: "Acasă" },
                 { href: "/galerie", label: "Galerie Proiecte" },

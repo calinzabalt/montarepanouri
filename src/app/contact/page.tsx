@@ -37,8 +37,8 @@ export default function ContactPage() {
           <span className="px-3.5 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider rounded-full inline-block">
             Suntem Aici Pentru Tine
           </span>
-          <h1 className="text-4xl sm:text-5xl font-black text-white">
-            Informații Operative &amp; Contact Direct
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white">
+            Informații &amp; Contact Direct
           </h1>
           <p className="text-slate-400 text-base max-w-2xl mx-auto">
             Ai o întrebare generală sau dorești o vizită tehnică în județul tău? Echipa noastră îți stă la dispoziție.
@@ -46,8 +46,8 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div className="max-w-7xl mx-auto px-4 py-10 sm:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           
           {/* Left Column: Operational Cards */}
           <div className="lg:col-span-5 space-y-6">
@@ -103,7 +103,7 @@ export default function ContactPage() {
                   <div className="text-xs text-slate-400 font-semibold uppercase tracking-wider">
                     Email Oficial
                   </div>
-                  <div className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">
+                  <div className="text-base sm:text-lg font-bold text-white group-hover:text-emerald-400 transition-colors break-all">
                     {companyData.email}
                   </div>
                   <div className="text-xs text-slate-400 mt-0.5">Pentru proiecte tehnice &amp; cereri B2B</div>
@@ -124,24 +124,26 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-5 bg-slate-900 border border-slate-800 rounded-2xl">
-                <div className="p-3 bg-slate-800 rounded-xl text-purple-400">
-                  <MapPin className="w-6 h-6" />
-                </div>
-                <div>
-                  <div className="text-xs text-slate-400 font-semibold uppercase tracking-wider">
-                    Sediu Central &amp; Depozit
+              {companyData.showAddress ? (
+                <div className="flex items-start gap-4 p-5 bg-slate-900 border border-slate-800 rounded-2xl">
+                  <div className="p-3 bg-slate-800 rounded-xl text-purple-400">
+                    <MapPin className="w-6 h-6" />
                   </div>
-                  <div className="text-sm font-bold text-white mt-1">
-                    {companyData.address}
+                  <div>
+                    <div className="text-xs text-slate-400 font-semibold uppercase tracking-wider">
+                      Sediu Central &amp; Depozit
+                    </div>
+                    <div className="text-sm font-bold text-white mt-1">
+                      {companyData.address}
+                    </div>
                   </div>
                 </div>
-              </div>
+              ) : null}
             </div>
           </div>
 
           {/* Right Column: Simple Contact Form */}
-          <div className="lg:col-span-7 bg-slate-900/90 border border-slate-800 rounded-3xl p-8 shadow-2xl space-y-6">
+          <div className="lg:col-span-7 bg-slate-900/90 border border-slate-800 rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-2xl space-y-6">
             <div>
               <span className="text-xs font-semibold text-emerald-400 uppercase tracking-wider">
                 Întrebări Generale &amp; Suport

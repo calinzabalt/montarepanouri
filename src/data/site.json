@@ -1,0 +1,45 @@
+{
+  "site": {
+    "name": "MontarePanouri.ro",
+    "url": "https://montarepanouri.ro",
+    "language": "ro",
+    "primaryTopic": "Montaj panouri solare și baterii / bancuri de stocare",
+    "summary": "MontarePanouri.ro realizează montaj la cheie pentru panouri solare și baterii / bancuri de stocare. Focus pe Arad, Timișoara și Vestul României; proiecte mai mari cu stocare și național.",
+    "doesNotOffer": [
+      "Depunere dosar prosumator",
+      "Autorizări ANRE"
+    ],
+    "pages": [
+      {
+        "path": "/",
+        "title": "Montaj Panouri Solare & Baterii la Cheie",
+        "description": "Montaj panouri solare și baterii / bancuri de stocare la cheie în Arad, Timișoara și Vestul României."
+      },
+      {
+        "path": "/servicii",
+        "title": "Servicii Montaj Panouri Solare & Baterii",
+        "description": "Servicii de montaj panouri pe acoperiș, baterii / bancuri de stocare și diagnostic tehnic."
+      },
+      {
+        "path": "/galerie",
+        "title": "Galerie Lucrări Montaj Panouri & Stocare",
+        "description": "Imagini reale din teren: panouri pe acoperiș, invertoare și baterii / bancuri de stocare."
+      },
+      {
+        "path": "/blog",
+        "title": "Blog Panouri Solare & Stocare",
+        "description": "Articole și ghiduri practice despre montaj panouri solare, baterii și întreținerea sistemului."
+      },
+      {
+        "path": "/contact",
+        "title": "Contact Montaj Panouri Solare",
+        "description": "Contactează MontarePanouri.ro pentru oferte de montaj panouri solare și baterii / bancuri de stocare."
+      },
+      {
+        "path": "/cere-oferta",
+        "title": "Cere Ofertă Montaj Panouri & Baterii",
+        "description": "Solicită o ofertă personalizată pentru montaj panouri solare și baterii / bancuri de stocare."
+      }
+    ]
+  }
+}

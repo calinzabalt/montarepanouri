@@ -25,11 +25,15 @@ export async function generateMetadata({ params }: PageProps) {
   if (!service) return { title: "Serviciu Negăsit" };
 
   return {
-    title: `${service.title} | Montaj la Cheie`,
+    title: service.title,
     description: service.shortDescription,
+    alternates: {
+      canonical: `/servicii/${service.slug}`,
+    },
     openGraph: {
-      title: `${service.title} - MontarePanouri.ro`,
+      title: service.title,
       description: service.shortDescription,
+      url: `/servicii/${service.slug}`,
       images: [service.image],
     },
   };
@@ -43,17 +47,24 @@ export default async function ServiceDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  // Structured Service JSON-LD Schema
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": service.title,
-    "description": service.shortDescription,
-    "provider": {
+    name: service.title,
+    description: service.shortDescription,
+    serviceType: service.title,
+    provider: {
       "@type": "LocalBusiness",
-      "name": "MontarePanouri.ro",
+      name: "MontarePanouri.ro",
+      url: "https://montarepanouri.ro",
     },
-    "areaServed": "Romania",
+    areaServed: [
+      { "@type": "City", name: "Arad" },
+      { "@type": "City", name: "Timișoara" },
+      { "@type": "Country", name: "Romania" },
+    ],
+    image: `https://montarepanouri.ro${service.image}`,
+    url: `https://montarepanouri.ro/servicii/${service.slug}`,
   };
 
   return (
@@ -64,30 +75,30 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       />
 
       {/* Header Serviciu */}
-      <section className="relative py-16 lg:py-24 border-b border-slate-800 bg-slate-900/60 overflow-hidden">
+      <section className="relative py-10 sm:py-16 lg:py-24 border-b border-slate-800 bg-slate-900/60 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-5 sm:space-y-6">
               <span className="px-3.5 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider rounded-full inline-block">
                 <ShieldCheck className="w-3.5 h-3.5 inline mr-1 text-amber-400" />
                 Montaj Panouri &amp; Baterii
               </span>
 
-              <h1 className="text-3xl sm:text-5xl font-black text-white leading-tight">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
                 {service.title}
               </h1>
 
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+              <p className="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed">
                 {service.heroSubtitle}
               </p>
 
               {/* Technical Specs Quick Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
+              <div className="grid grid-cols-1 min-[400px]:grid-cols-2 sm:grid-cols-4 gap-3 pt-2 sm:pt-4">
                 {service.specs.map((spec, idx) => (
-                  <div key={idx} className="p-3 bg-slate-950 rounded-xl border border-slate-800 text-xs">
+                  <div key={idx} className="p-3 bg-slate-950 rounded-xl border border-slate-800 text-xs min-w-0">
                     <div className="text-slate-400 font-medium">{spec.label}</div>
-                    <div className="text-emerald-400 font-bold mt-1 text-sm">{spec.value}</div>
+                    <div className="text-emerald-400 font-bold mt-1 text-xs sm:text-sm break-words">{spec.value}</div>
                   </div>
                 ))}
               </div>
@@ -95,16 +106,16 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <div className="pt-2">
                 <a
                   href="#formular-oferta"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold text-sm rounded-xl shadow-lg shadow-emerald-950/60"
+                  className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-lg shadow-emerald-950/60 w-full sm:w-auto text-center"
                 >
-                  <Zap className="w-4 h-4 text-amber-300" />
-                  <span>SOLICITĂ ESTIMARE PENTRU ACEST SERVICIU</span>
+                  <Zap className="w-4 h-4 text-amber-300 shrink-0" />
+                  <span>Solicită estimare</span>
                 </a>
               </div>
             </div>
 
             {/* Main Service Image */}
-            <div className="lg:col-span-5 relative h-72 sm:h-96 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
+            <div className="lg:col-span-5 relative h-56 sm:h-72 lg:h-96 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
               <Image
                 src={service.image}
                 alt={service.title}
@@ -121,12 +132,12 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       </section>
 
       {/* Ce include serviciul: Beneficii și Specificații Tehnice */}
-      <section className="py-20 max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <section className="py-12 sm:py-20 max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           
           <div className="lg:col-span-7 space-y-8">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-4">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white mb-4">
                 Ce include pachetul complet?
               </h2>
               <p className="text-slate-300 text-sm leading-relaxed mb-6">
@@ -161,14 +172,14 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
           {/* Dedicated Gallery Photos */}
           <div className="lg:col-span-5 space-y-6">
-            <h3 className="text-xl font-bold text-white flex items-center justify-between">
-              <span>Galerie Lucrări Executate</span>
-              <span className="text-xs font-normal text-slate-400">Poze strict din teren</span>
+            <h3 className="text-lg sm:text-xl font-bold text-white flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+              <span>Galerie Lucrări</span>
+              <span className="text-xs font-normal text-slate-400">Poze din teren</span>
             </h3>
 
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-2 sm:gap-3">
               {service.galleryImages.map((img, i) => (
-                <div key={i} className="relative h-44 rounded-xl overflow-hidden border border-slate-800 group">
+                <div key={i} className="relative h-36 sm:h-44 rounded-xl overflow-hidden border border-slate-800 group">
                   <Image
                     src={img}
                     alt={`${service.title} - Imagine ${i + 1}`}
@@ -213,7 +224,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       {/* Dedicated Formular Oferta */}
       <QuoteFormSection
         title={`Solicită o ofertă dedicată pentru ${service.title}`}
-        subtitle="Completează datele de mai jos și un inginer autorizat vă va contacta pentru devizul tehnic."
+        subtitle="Completează datele de mai jos și te contactăm pentru un deviz clar de montaj."
       />
     </div>
   );

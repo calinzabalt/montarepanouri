@@ -32,8 +32,8 @@ export default function QuickQuoteModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fadeIn">
-      <div className="relative w-full max-w-xl bg-slate-900 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-slate-950/80 backdrop-blur-md animate-fadeIn">
+      <div className="relative w-full max-w-xl bg-slate-900 border border-slate-700/80 rounded-t-2xl sm:rounded-2xl p-5 sm:p-8 shadow-2xl overflow-y-auto max-h-[min(92dvh,720px)]">
         {/* Decorative ambient light */}
         <div className="absolute -top-20 -right-20 w-48 h-48 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -178,9 +178,9 @@ export default function QuickQuoteModal({
                 </button>
               </div>
 
-              <div className="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-slate-800">
+              <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between text-xs text-slate-400 pt-2 border-t border-slate-800">
                 <span className="flex items-center gap-1">
-                  <PhoneCall className="w-3.5 h-3.5 text-emerald-400" /> Răspuns rapid în 30 min
+                  <PhoneCall className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Răspuns rapid în 30 min
                 </span>
                 <span>Fără obligație financiară</span>
               </div>

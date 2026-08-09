@@ -87,10 +87,10 @@ export default function Breadcrumbs({ blogEntries, serviceEntries }: Breadcrumbs
   return (
     <nav
       aria-label="Breadcrumb"
-      className="relative z-30 mt-[106px] sm:mt-[112px] bg-[#080F1A]"
+      className="relative z-30 mt-[112px] sm:mt-[118px] bg-[#080F1A]"
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 overflow-x-auto">
-        <ol className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.06] bg-white/[0.03] px-3.5 py-1.5 text-[11px] sm:text-xs whitespace-nowrap">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-2.5 sm:py-3 overflow-x-auto">
+        <ol className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.06] bg-white/[0.03] px-3 py-1.5 text-[11px] sm:text-xs whitespace-nowrap max-w-full">
           {items.map((item, index) => {
             const isLast = index === items.length - 1;
 

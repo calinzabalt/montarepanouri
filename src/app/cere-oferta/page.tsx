@@ -1,21 +1,27 @@
-import React from "react";
+import type { Metadata } from "next";
 import StepQuoteForm from "@/components/ui/StepQuoteForm";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import WhyUsSection from "@/components/sections/WhyUsSection";
 import { ShieldCheck, CheckCircle2, PhoneCall } from "lucide-react";
 import companyData from "@/data/company.json";
 
-export const metadata = {
-  title: "Cere Ofertă Fotovoltaică & Stocare Gratuită",
+export const metadata: Metadata = {
+  title: "Cere Ofertă Montaj Panouri & Baterii",
   description:
-    "Solicită o evaluare gratuită și o ofertă personalizată pentru montaj panouri solare și baterii / bancuri de stocare.",
+    "Solicită o ofertă personalizată pentru montaj panouri solare și baterii / bancuri de stocare. Răspuns rapid, fără obligație.",
+  alternates: {
+    canonical: "/cere-oferta",
+  },
+  openGraph: {
+    title: "Cere Ofertă Montaj Panouri & Baterii",
+    description:
+      "Completează formularul și primești o estimare pentru montaj panouri solare și stocare.",
+    url: "/cere-oferta",
+  },
 };
 
 export default function CereOfertaPage() {
   return (
     <div className="bg-slate-950 min-h-screen text-slate-200">
-      
-      {/* Header Landing */}
       <div className="py-12 bg-slate-900/60 border-b border-slate-800 text-center">
         <div className="max-w-4xl mx-auto px-4 space-y-4">
           <span className="px-4 py-1.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider rounded-full inline-flex items-center gap-1.5">
@@ -28,7 +34,7 @@ export default function CereOfertaPage() {
           </h1>
 
           <p className="text-slate-300 text-base max-w-2xl mx-auto leading-relaxed">
-            Află în 5 pași simpli puterea optimă a sistemului fotovoltaic, capacitatea necesară a bateriei de stocare și timpul estimat de amortizare.
+            Află în câțiva pași puterea potrivită a sistemului, dacă ai nevoie de baterii / banc de stocare și ce urmează la montaj.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-6 pt-2 text-xs font-medium text-slate-400">
@@ -45,23 +51,17 @@ export default function CereOfertaPage() {
         </div>
       </div>
 
-      {/* Main Interactive Step Form Section */}
       <section className="py-16 max-w-4xl mx-auto px-4">
         <StepQuoteForm />
       </section>
 
-      {/* Why Us Highlights */}
       <WhyUsSection />
 
-      {/* Testimonials for Trust */}
-      <TestimonialsSection />
-
-      {/* Direct Call Banner */}
       <section className="py-16 bg-slate-900 border-t border-slate-800 text-center">
         <div className="max-w-3xl mx-auto px-4 space-y-4">
-          <h3 className="text-2xl font-bold text-white">Preferi să vorbești direct cu un inginer?</h3>
+          <h3 className="text-2xl font-bold text-white">Preferi să vorbești direct?</h3>
           <p className="text-slate-400 text-sm">
-            Suntem disponibili de Luni până Vineri între 08:00 și 18:00 pentru consultanță directă la telefon.
+            Suntem disponibili de Luni până Vineri între 08:00 și 18:00 pentru consultanță la telefon.
           </p>
           <a
             href={`tel:${companyData.phoneRaw}`}

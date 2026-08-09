@@ -1,4 +1,4 @@
-import React from "react";
+import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
 import WhyUsSection from "@/components/sections/WhyUsSection";
 import ServicesSection from "@/components/sections/ServicesSection";
@@ -6,41 +6,37 @@ import ProcessSection from "@/components/sections/ProcessSection";
 import GallerySection from "@/components/sections/GallerySection";
 import FaqSection from "@/components/sections/FaqSection";
 import QuoteFormSection from "@/components/sections/QuoteFormSection";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import CoverageMapSection from "@/components/sections/CoverageMapSection";
 import BlogSection from "@/components/sections/BlogSection";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Montaj Panouri Solare & Baterii la Cheie | MontarePanouri.ro",
+  },
+  description:
+    "Montaj panouri solare și baterii / bancuri de stocare la cheie. Focus pe Arad, Timișoara și Vestul României; proiecte mai mari cu stocare și la nivel național.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Montaj Panouri Solare & Baterii la Cheie | MontarePanouri.ro",
+    description:
+      "Montaj panouri solare și baterii / bancuri de stocare la cheie în Arad, Timișoara și Vestul României.",
+    url: "/",
+  },
+};
 
 export default function HomePage() {
   return (
     <>
-      {/* 1. Hero Section */}
       <HeroSection />
-
-      {/* 2. Puncte Forte / De ce noi */}
       <WhyUsSection />
-
-      {/* 3. Gama de Servicii */}
       <ServicesSection />
-
-      {/* 4. Cum Funcționează (Pas cu Pas) */}
       <ProcessSection />
-
-      {/* 5. Galerie Rapidă / Proiecte Recente (limit 6) */}
       <GallerySection limit={6} />
-
-      {/* Testimonials */}
-      <TestimonialsSection />
-
-      {/* Coverage Map */}
       <CoverageMapSection />
-
-      {/* Latest Blog Articles Preview */}
       <BlogSection limit={3} />
-
-      {/* 6. Secțiune FAQ */}
       <FaqSection />
-
-      {/* 7. Formular Comercial (Secțiune Finală) */}
       <QuoteFormSection />
     </>
   );

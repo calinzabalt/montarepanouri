@@ -2,7 +2,9 @@ import React from "react";
 
 export const metadata = {
   title: "Politică de Confidențialitate (GDPR)",
-  description: "Politica de confidențialitate și prelucrare a datelor cu caracter personal conform Regulamentului UE 2016/679 (GDPR).",
+  description:
+    "Cum prelucrează și protejează MontarePanouri.ro datele personale din formularele de contact și cereri de ofertă, conform GDPR.",
+  alternates: { canonical: "/politica-confidentialitate" },
 };
 
 export default function PrivacyPolicyPage() {
@@ -38,9 +40,9 @@ export default function PrivacyPolicyPage() {
               Prelucrarea datelor se face pentru:
             </p>
             <ul className="list-disc pl-5 space-y-1">
-              <li>Preluarea și procesarea cererilor de ofertă tehnică pentru sisteme fotovoltaice și baterii.</li>
-              <li>Întocmirea dosarului de prosumator și comunicarea cu distribuitorul de energie.</li>
-              <li>Contactarea telefonică în vederea efectuării măsurătorilor pe teren.</li>
+              <li>Preluarea și procesarea cererilor de ofertă pentru montaj panouri solare și baterii / bancuri de stocare.</li>
+              <li>Contactarea telefonică și programarea măsurătorilor pe teren.</li>
+              <li>Comunicarea legată de ofertă, montaj și suport după instalare.</li>
             </ul>
           </section>
 
