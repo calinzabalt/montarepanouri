@@ -94,7 +94,7 @@ export default function QuoteFormSection({
                   <input
                     type="tel"
                     required
-                    placeholder="0700 000 000"
+                    placeholder="0743 960 969"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white placeholder-slate-500 text-sm focus:outline-none focus:border-emerald-500"

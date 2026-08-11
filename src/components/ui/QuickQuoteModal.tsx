@@ -105,7 +105,7 @@ export default function QuickQuoteModal({
                   <input
                     type="tel"
                     required
-                    placeholder="0712 345 678"
+                    placeholder="0743 960 969"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 text-sm"
