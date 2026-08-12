@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import companyData from "@/data/company.json";
 import CoverageMapSection from "@/components/sections/CoverageMapSection";
+import { submitContact } from "@/lib/submit-contact";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -22,10 +23,27 @@ export default function ContactPage() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+    const result = await submitContact({
+      source: "Pagină Contact",
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    });
+    setLoading(false);
+    if (result.ok) {
+      setSubmitted(true);
+    } else {
+      setError(result.error);
+    }
   };
 
   return (
@@ -238,12 +256,16 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {error ? (
+                  <p className="text-sm text-red-400 text-center">{error}</p>
+                ) : null}
                 <button
                   type="submit"
-                  className="w-full py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-lg flex items-center justify-center gap-2 transition-all"
+                  disabled={loading}
+                  className="w-full py-3.5 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-xs rounded-xl shadow-lg flex items-center justify-center gap-2 transition-all"
                 >
                   <Send className="w-4 h-4" />
-                  <span>TRIMITE MESAJUL GENERAL</span>
+                  <span>{loading ? "SE TRIMITE..." : "TRIMITE MESAJUL GENERAL"}</span>
                 </button>
               </form>
             )}

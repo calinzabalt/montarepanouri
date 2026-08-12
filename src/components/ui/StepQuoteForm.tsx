@@ -16,6 +16,7 @@ import {
   ArrowLeft,
   ShieldCheck
 } from "lucide-react";
+import { submitContact } from "@/lib/submit-contact";
 
 export default function StepQuoteForm() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -33,13 +34,35 @@ export default function StepQuoteForm() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const nextStep = () => setCurrentStep((prev) => Math.min(prev + 1, 5));
   const prevStep = () => setCurrentStep((prev) => Math.max(prev - 1, 1));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+    const result = await submitContact({
+      source: "Formular Pași — Cere Ofertă",
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      county: formData.county,
+      city: formData.city,
+      propertyType: formData.propertyType,
+      roofType: formData.roofType,
+      batteryOption: formData.wantBatteries,
+      monthlyBill: formData.monthlyBill,
+      notes: formData.notes,
+    });
+    setLoading(false);
+    if (result.ok) {
+      setSubmitted(true);
+    } else {
+      setError(result.error);
+    }
   };
 
   if (submitted) {
@@ -336,13 +359,19 @@ export default function StepQuoteForm() {
               <ArrowRight className="w-4 h-4" />
             </button>
           ) : (
-            <button
-              type="submit"
-              className="px-6 sm:px-8 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-black text-xs rounded-xl shadow-xl shadow-emerald-950/50 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
-            >
-              <ShieldCheck className="w-4 h-4 text-amber-300 shrink-0" />
-              <span>Trimite pentru estimare</span>
-            </button>
+            <div className="w-full sm:w-auto space-y-2">
+              {error ? (
+                <p className="text-xs text-red-400 text-center sm:text-right">{error}</p>
+              ) : null}
+              <button
+                type="submit"
+                disabled={loading}
+                className="px-6 sm:px-8 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-black text-xs rounded-xl shadow-xl shadow-emerald-950/50 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
+              >
+                <ShieldCheck className="w-4 h-4 text-amber-300 shrink-0" />
+                <span>{loading ? "Se trimite..." : "Trimite pentru estimare"}</span>
+              </button>
+            </div>
           )}
         </div>
 

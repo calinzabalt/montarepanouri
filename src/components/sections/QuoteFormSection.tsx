@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Send, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
 import companyData from "@/data/company.json";
+import { submitContact } from "@/lib/submit-contact";
 
 interface QuoteFormSectionProps {
   title?: string;
@@ -26,10 +27,31 @@ export default function QuoteFormSection({
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+    const result = await submitContact({
+      source: "Formular Ofertă Extins",
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      county: formData.county,
+      propertyType: formData.propertyType,
+      roofType: formData.roofType,
+      batteryOption: formData.batteryOption,
+      monthlyBill: formData.monthlyBill,
+      notes: formData.notes,
+    });
+    setLoading(false);
+    if (result.ok) {
+      setSubmitted(true);
+    } else {
+      setError(result.error);
+    }
   };
 
   return (
@@ -198,13 +220,17 @@ export default function QuoteFormSection({
               </div>
 
               {/* Submit Button */}
-              <div className="pt-2">
+              <div className="pt-2 space-y-3">
+                {error ? (
+                  <p className="text-sm text-red-400 text-center">{error}</p>
+                ) : null}
                 <button
                   type="submit"
-                  className="w-full py-3.5 sm:py-4 px-4 sm:px-8 bg-gradient-to-r from-emerald-500 via-teal-500 to-amber-500 hover:from-emerald-600 hover:to-amber-600 text-white font-extrabold text-sm sm:text-base rounded-2xl shadow-xl shadow-emerald-950/60 transition-all flex flex-wrap items-center justify-center gap-2 group"
+                  disabled={loading}
+                  className="w-full py-3.5 sm:py-4 px-4 sm:px-8 bg-gradient-to-r from-emerald-500 via-teal-500 to-amber-500 hover:from-emerald-600 hover:to-amber-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-extrabold text-sm sm:text-base rounded-2xl shadow-xl shadow-emerald-950/60 transition-all flex flex-wrap items-center justify-center gap-2 group"
                 >
                   <Zap className="w-5 h-5 text-amber-300 group-hover:scale-110 transition-transform shrink-0" />
-                  <span>Trimite cererea pentru estimare</span>
+                  <span>{loading ? "Se trimite..." : "Trimite cererea pentru estimare"}</span>
                   <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform shrink-0" />
                 </button>
               </div>

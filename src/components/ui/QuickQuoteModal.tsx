@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { X, Send, CheckCircle2, ShieldCheck, PhoneCall } from "lucide-react";
+import { submitContact } from "@/lib/submit-contact";
 
 interface QuickQuoteModalProps {
   isOpen: boolean;
@@ -23,12 +24,29 @@ export default function QuickQuoteModal({
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+    const result = await submitContact({
+      source: "Modal Cere Ofertă",
+      name: formData.name,
+      phone: formData.phone,
+      county: formData.county,
+      service: formData.service,
+      notes: formData.notes,
+    });
+    setLoading(false);
+    if (result.ok) {
+      setSubmitted(true);
+    } else {
+      setError(result.error);
+    }
   };
 
   return (
@@ -168,13 +186,17 @@ export default function QuickQuoteModal({
                 />
               </div>
 
-              <div className="pt-2">
+              <div className="pt-2 space-y-3">
+                {error ? (
+                  <p className="text-sm text-red-400 text-center">{error}</p>
+                ) : null}
                 <button
                   type="submit"
-                  className="w-full py-3.5 px-6 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-900/30 transition-all flex items-center justify-center gap-2 group"
+                  disabled={loading}
+                  className="w-full py-3.5 px-6 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold rounded-xl shadow-lg shadow-emerald-900/30 transition-all flex items-center justify-center gap-2 group"
                 >
                   <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  Trimite Cerere Estimare Montaj
+                  {loading ? "Se trimite..." : "Trimite Cerere Estimare Montaj"}
                 </button>
               </div>
 
