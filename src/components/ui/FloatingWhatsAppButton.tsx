@@ -22,7 +22,7 @@ export default function FloatingWhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Scrie-ne pe WhatsApp"
-      className="fixed bottom-16 right-3 z-50 sm:bottom-6 sm:right-6 animate-fadeIn"
+      className="fixed bottom-3 right-3 z-50 sm:bottom-6 sm:right-6 animate-fadeIn"
     >
       <span className="absolute inset-0 rounded-full bg-emerald-500/40 animate-ping hidden sm:block" aria-hidden="true" />
       <span className="absolute inset-0 rounded-full bg-emerald-500/25 whatsapp-pulse hidden sm:block" aria-hidden="true" />
