@@ -176,25 +176,33 @@ export default async function BlogArticlePage({ params }: PageProps) {
 
               <form className="space-y-3">
                 <div>
+                  <label htmlFor="blog-name" className="sr-only">Nume</label>
                   <input
+                    id="blog-name"
                     type="text"
                     required
                     placeholder="Numele tău *"
-                    className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-white placeholder-slate-500 text-xs focus:outline-none focus:border-emerald-500"
+                    className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-white placeholder-slate-400 text-xs focus:outline-none focus:border-emerald-500"
                   />
                 </div>
 
                 <div>
+                  <label htmlFor="blog-phone" className="sr-only">Telefon</label>
                   <input
+                    id="blog-phone"
                     type="tel"
                     required
                     placeholder="Număr de telefon *"
-                    className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-white placeholder-slate-500 text-xs focus:outline-none focus:border-emerald-500"
+                    className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-white placeholder-slate-400 text-xs focus:outline-none focus:border-emerald-500"
                   />
                 </div>
 
                 <div>
-                  <select className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-white text-xs focus:outline-none focus:border-emerald-500">
+                  <label htmlFor="blog-county" className="sr-only">Județ</label>
+                  <select
+                    id="blog-county"
+                    className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-white text-xs focus:outline-none focus:border-emerald-500"
+                  >
                     {companyData.countiesPrimary.map((c) => (
                       <option key={c} value={c} className="bg-slate-900">
                         {c}
@@ -210,6 +218,13 @@ export default async function BlogArticlePage({ params }: PageProps) {
                   <Sun className="w-4 h-4 text-amber-300" />
                   <span>TRIMITE PENTRU ESTIMARE</span>
                 </button>
+                <p className="text-[11px] text-slate-400 leading-relaxed text-center">
+                  Prin trimitere, datele sunt prelucrate pentru a vă contacta în legătură cu cererea, conform{" "}
+                  <Link href="/politica-confidentialitate" className="text-emerald-400 hover:underline">
+                    Politicii de confidențialitate
+                  </Link>
+                  .
+                </p>
               </form>
 
               <div className="pt-4 border-t border-slate-800 text-center text-[11px] text-slate-400">

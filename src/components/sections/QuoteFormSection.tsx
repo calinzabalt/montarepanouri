@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Send, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
 import companyData from "@/data/company.json";
 import { submitContact } from "@/lib/submit-contact";
+import FormPrivacyNote from "@/components/ui/FormPrivacyNote";
 
 interface QuoteFormSectionProps {
   title?: string;
@@ -55,13 +56,13 @@ export default function QuoteFormSection({
   };
 
   return (
-    <section id="formular-oferta" className="py-16 sm:py-24 lg:py-32 bg-[#080F1A] relative overflow-hidden">
+    <section id="formular-oferta" className="scroll-mt-32 py-16 sm:py-24 lg:py-32 bg-[#080F1A] relative overflow-hidden">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 blur-[120px] pointer-events-none" />
+      <div className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 blur-[120px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
         
-        <div className="bg-slate-900/90 backdrop-blur-xl border border-white/[0.08] rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-14 shadow-2xl">
+        <div className="bg-slate-900/95 sm:bg-slate-900/90 sm:backdrop-blur-xl border border-white/[0.08] rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-14 shadow-2xl">
           
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 space-y-3">
@@ -96,10 +97,11 @@ export default function QuoteFormSection({
               {/* Step 1: Contact basic details */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                  <label htmlFor="quote-name" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
                     Nume &amp; Prenume *
                   </label>
                   <input
+                    id="quote-name"
                     type="text"
                     required
                     placeholder="Ex: Adrian Popescu"
@@ -110,10 +112,11 @@ export default function QuoteFormSection({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                  <label htmlFor="quote-phone" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
                     Telefon Mobil *
                   </label>
                   <input
+                    id="quote-phone"
                     type="tel"
                     required
                     placeholder="0743 960 969"
@@ -124,10 +127,11 @@ export default function QuoteFormSection({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                  <label htmlFor="quote-county" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
                     Județ / Regiune *
                   </label>
                   <select
+                    id="quote-county"
                     value={formData.county}
                     onChange={(e) => setFormData({ ...formData, county: e.target.value })}
                     className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white text-sm focus:outline-none focus:border-emerald-500"
@@ -145,10 +149,11 @@ export default function QuoteFormSection({
               {/* Step 2: Technical Specifications */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                  <label htmlFor="quote-property" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
                     Tip Proprietate
                   </label>
                   <select
+                    id="quote-property"
                     value={formData.propertyType}
                     onChange={(e) => setFormData({ ...formData, propertyType: e.target.value })}
                     className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white text-sm focus:outline-none focus:border-emerald-500"
@@ -160,10 +165,11 @@ export default function QuoteFormSection({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                  <label htmlFor="quote-roof" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
                     Tip Acoperiș
                   </label>
                   <select
+                    id="quote-roof"
                     value={formData.roofType}
                     onChange={(e) => setFormData({ ...formData, roofType: e.target.value })}
                     className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white text-sm focus:outline-none focus:border-emerald-500"
@@ -175,10 +181,11 @@ export default function QuoteFormSection({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                  <label htmlFor="quote-battery" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
                     Stocare Baterii?
                   </label>
                   <select
+                    id="quote-battery"
                     value={formData.batteryOption}
                     onChange={(e) => setFormData({ ...formData, batteryOption: e.target.value })}
                     className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white text-sm focus:outline-none focus:border-emerald-500"
@@ -190,10 +197,11 @@ export default function QuoteFormSection({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                  <label htmlFor="quote-bill" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
                     Consum Lunar Mediu
                   </label>
                   <select
+                    id="quote-bill"
                     value={formData.monthlyBill}
                     onChange={(e) => setFormData({ ...formData, monthlyBill: e.target.value })}
                     className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white text-sm focus:outline-none focus:border-emerald-500"
@@ -207,10 +215,11 @@ export default function QuoteFormSection({
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                <label htmlFor="quote-notes" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
                   Observații sau Cerințe Particulare (Opțional)
                 </label>
                 <textarea
+                  id="quote-notes"
                   rows={3}
                   placeholder="Ex: Doresc montaj în Timișoara / Arad, acoperiș din țiglă ceramică..."
                   value={formData.notes}
@@ -236,10 +245,7 @@ export default function QuoteFormSection({
               </div>
 
               <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between text-xs text-slate-400 pt-3 border-t border-slate-800/80">
-                <span className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                  Date protejate conform GDPR
-                </span>
+                <FormPrivacyNote />
                 <span>Asistență: {companyData.phone}</span>
               </div>
             </form>

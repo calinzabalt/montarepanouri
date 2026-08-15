@@ -5,6 +5,12 @@
     "language": "ro",
     "primaryTopic": "Montaj panouri solare și baterii / bancuri de stocare",
     "summary": "MontarePanouri.ro realizează montaj la cheie pentru panouri solare și baterii / bancuri de stocare. Focus pe Arad, Timișoara și Vestul României; proiecte mai mari cu stocare și național.",
+    "legalEntity": {
+      "name": "BRE SOLAR S.R.L.",
+      "cui": "55422983",
+      "tradeRegister": "J2026049697009",
+      "legalAddress": "Sat Zăbalț, Comuna Ususău, Jud. Arad, Nr. 84"
+    },
     "doesNotOffer": [
       "Depunere dosar prosumator",
       "Autorizări ANRE"

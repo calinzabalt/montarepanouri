@@ -149,7 +149,7 @@ export default function Header() {
             <div className="hidden lg:flex items-center">
               <button
                 onClick={() => setModalOpen(true)}
-                className="group flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-bold shadow-lg shadow-emerald-900/40 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="group flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-bold shadow-lg shadow-emerald-900/40 transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <Zap className="w-4 h-4 text-amber-300 group-hover:rotate-12 transition-transform" />
                 Cere Ofertă
@@ -160,7 +160,7 @@ export default function Header() {
             <div className="lg:hidden flex items-center gap-2">
               <button
                 onClick={() => setModalOpen(true)}
-                className="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-lg transition-colors"
+                className="px-3.5 py-2 bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs rounded-lg transition-colors"
               >
                 Ofertă
               </button>
@@ -212,7 +212,7 @@ export default function Header() {
               <div className="pt-3">
                 <button
                   onClick={() => { setMobileMenuOpen(false); setModalOpen(true); }}
-                  className="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-xl transition-colors"
+                  className="w-full py-3 bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-sm rounded-xl transition-colors"
                 >
                   Cere Ofertă Personalizată
                 </button>

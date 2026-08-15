@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Sun, ShieldCheck, Zap, Phone, ArrowRight, CheckCircle2, MapPin } from "lucide-react";
 import companyData from "@/data/company.json";
 import { submitContact } from "@/lib/submit-contact";
+import FormPrivacyNote from "@/components/ui/FormPrivacyNote";
 
 interface HeroSectionProps {
   title?: string;
@@ -45,8 +46,8 @@ export default function HeroSection({
   return (
     <section className="relative min-h-screen flex items-center pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden bg-[#080F1A]">
       {/* Ambient glows */}
-      <div className="absolute top-1/3 -left-32 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-amber-500/08 rounded-full blur-[100px] pointer-events-none" />
+      <div className="hidden sm:block absolute top-1/3 -left-32 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="hidden sm:block absolute bottom-0 right-0 w-[400px] h-[400px] bg-amber-500/08 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.07] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full relative z-10">
@@ -145,8 +146,8 @@ export default function HeroSection({
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="text-base font-bold text-white">Calcul Rapid Estimare</h3>
-                    <p className="text-slate-500 text-xs mt-0.5">Răspuns în maxim 30 de minute</p>
+                    <h2 className="text-base font-bold text-white">Calcul Rapid Estimare</h2>
+                    <p className="text-slate-400 text-xs mt-0.5">Răspuns în maxim 30 de minute</p>
                   </div>
                   <span className="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded-lg border border-emerald-500/20 uppercase tracking-wide">
                     Gratuit
@@ -161,35 +162,45 @@ export default function HeroSection({
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-3">
+                    <label htmlFor="hero-name" className="sr-only">Numele dumneavoastră</label>
                     <input
+                      id="hero-name"
                       type="text"
                       required
                       placeholder="Numele dumneavoastră *"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 bg-[#080F1A] border border-white/[0.08] rounded-xl text-white placeholder-slate-600 text-sm focus:outline-none focus:border-emerald-500/50 transition-colors"
+                      className="w-full px-4 py-3 bg-[#080F1A] border border-white/[0.08] rounded-xl text-white placeholder-slate-400 text-sm focus:outline-none focus:border-emerald-500/50 transition-colors"
                     />
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                      <input
-                        type="tel"
-                        required
-                        placeholder="Telefon *"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-3 bg-[#080F1A] border border-white/[0.08] rounded-xl text-white placeholder-slate-600 text-sm focus:outline-none focus:border-emerald-500/50 transition-colors"
-                      />
-                      <select
-                        value={formData.county}
-                        onChange={(e) => setFormData({ ...formData, county: e.target.value })}
-                        className="w-full px-3 py-3 bg-[#080F1A] border border-white/[0.08] rounded-xl text-white text-sm focus:outline-none focus:border-emerald-500/50 transition-colors"
-                      >
+                      <div>
+                        <label htmlFor="hero-phone" className="sr-only">Telefon</label>
+                        <input
+                          id="hero-phone"
+                          type="tel"
+                          required
+                          placeholder="Telefon *"
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          className="w-full px-4 py-3 bg-[#080F1A] border border-white/[0.08] rounded-xl text-white placeholder-slate-400 text-sm focus:outline-none focus:border-emerald-500/50 transition-colors"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="hero-county" className="sr-only">Județ</label>
+                        <select
+                          id="hero-county"
+                          value={formData.county}
+                          onChange={(e) => setFormData({ ...formData, county: e.target.value })}
+                          className="w-full px-3 py-3 bg-[#080F1A] border border-white/[0.08] rounded-xl text-white text-sm focus:outline-none focus:border-emerald-500/50 transition-colors"
+                        >
                         <option value="Timiș (Timișoara)">Timiș</option>
                         <option value="Arad">Arad</option>
                         <option value="Bihor (Oradea)">Bihor</option>
                         <option value="Caraș-Severin">Caraș-Severin</option>
                         <option value="Hunedoara">Hunedoara</option>
                         <option value="Alt județ">Alt județ</option>
-                      </select>
+                        </select>
+                      </div>
                     </div>
                     {error ? (
                       <p className="text-xs text-red-400 text-center">{error}</p>
@@ -197,11 +208,12 @@ export default function HeroSection({
                     <button
                       type="submit"
                       disabled={loading}
-                      className="w-full py-3.5 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-sm rounded-xl transition-colors flex items-center justify-center gap-2 shadow-lg shadow-emerald-900/30"
+                      className="w-full py-3.5 bg-emerald-700 hover:bg-emerald-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-sm rounded-xl transition-colors flex items-center justify-center gap-2 shadow-lg shadow-emerald-900/30"
                     >
                       <Sun className="w-4 h-4 text-amber-300" />
                       {loading ? "Se trimite..." : "Solicită Estimarea Gratuită"}
                     </button>
+                    <FormPrivacyNote className="text-center" />
                   </form>
                 )}
               </div>

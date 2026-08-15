@@ -61,7 +61,7 @@ export default function CoverageMapSection({
 
             <a
               href={`tel:${companyData.phoneRaw}`}
-              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-emerald-950/50 transition-all w-full sm:w-auto text-center"
+              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs rounded-xl shadow-lg shadow-emerald-950/50 transition-all w-full sm:w-auto text-center"
             >
               <PhoneCall className="w-4 h-4 shrink-0" />
               <span>Verifică disponibilitatea</span>

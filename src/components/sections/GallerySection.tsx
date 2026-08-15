@@ -75,7 +75,7 @@ export default function GallerySection({
                 onClick={() => setActiveTab(cat.id)}
                 className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
                   activeTab === cat.id
-                    ? "bg-emerald-600 text-white shadow-lg shadow-emerald-950/50 scale-105"
+                    ? "bg-emerald-700 text-white shadow-lg shadow-emerald-950/50 scale-105"
                     : "bg-slate-900 text-slate-400 hover:text-white border border-slate-800 hover:border-slate-700"
                 }`}
               >
@@ -98,7 +98,7 @@ export default function GallerySection({
                     alt={proj.title}
                     width={1200}
                     height={800}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover md:group-hover:scale-110 md:transition-transform md:duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
 

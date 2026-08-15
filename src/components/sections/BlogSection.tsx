@@ -102,7 +102,7 @@ export default function BlogSection({
 
                 <Link
                   href={`/blog/${highlightedArticle.slug}`}
-                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-md transition-all w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs rounded-xl shadow-md transition-all w-full sm:w-auto"
                 >
                   <span>Citește Articolul</span>
                   <ArrowRight className="w-3.5 h-3.5" />

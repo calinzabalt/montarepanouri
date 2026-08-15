@@ -50,7 +50,7 @@ export default function ServicesSection({
   };
 
   return (
-    <section id="servicii" className="py-16 sm:py-24 lg:py-32 bg-[#080F1A] relative">
+    <section id="servicii" className="scroll-mt-32 py-16 sm:py-24 lg:py-32 bg-[#080F1A] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Header */}
@@ -79,14 +79,15 @@ export default function ServicesSection({
                   <Image
                     src={service.image}
                     alt={service.title}
-                    width={1200}
-                    height={700}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    width={800}
+                    height={450}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="w-full h-full object-cover md:group-hover:scale-105 md:transition-transform md:duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
                   
                   {/* Icon Badge */}
-                  <div className="absolute top-4 left-4 p-3 bg-slate-900/90 backdrop-blur-md border border-slate-700/80 rounded-xl shadow-lg">
+                  <div className="absolute top-4 left-4 p-3 bg-slate-900/90 border border-slate-700/80 rounded-xl shadow-lg">
                     {getIcon(service.icon)}
                   </div>
                 </div>

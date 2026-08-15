@@ -17,6 +17,7 @@ import {
   ShieldCheck
 } from "lucide-react";
 import { submitContact } from "@/lib/submit-contact";
+import FormPrivacyNote from "@/components/ui/FormPrivacyNote";
 
 export default function StepQuoteForm() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -247,12 +248,13 @@ export default function StepQuoteForm() {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                <label htmlFor="step-name" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
                   Nume &amp; Prenume *
                 </label>
                 <div className="relative">
                   <User className="w-4 h-4 text-slate-500 absolute left-3.5 top-3.5" />
                   <input
+                    id="step-name"
                     type="text"
                     required
                     placeholder="Ion Popescu"
@@ -264,12 +266,13 @@ export default function StepQuoteForm() {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                <label htmlFor="step-phone" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
                   Telefon Mobil *
                 </label>
                 <div className="relative">
                   <Phone className="w-4 h-4 text-slate-500 absolute left-3.5 top-3.5" />
                   <input
+                    id="step-phone"
                     type="tel"
                     required
                     placeholder="0743 960 969"
@@ -283,12 +286,13 @@ export default function StepQuoteForm() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                <label htmlFor="step-email" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
                   Email (Opțional)
                 </label>
                 <div className="relative">
                   <Mail className="w-4 h-4 text-slate-500 absolute left-3.5 top-3.5" />
                   <input
+                    id="step-email"
                     type="email"
                     placeholder="nume@email.ro"
                     value={formData.email}
@@ -299,12 +303,13 @@ export default function StepQuoteForm() {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                <label htmlFor="step-county" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
                   Județ *
                 </label>
                 <div className="relative">
                   <MapPin className="w-4 h-4 text-slate-500 absolute left-3.5 top-3.5" />
                   <select
+                    id="step-county"
                     value={formData.county}
                     onChange={(e) => setFormData({ ...formData, county: e.target.value })}
                     className="w-full pl-10 pr-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white text-sm focus:outline-none focus:border-emerald-500"
@@ -321,10 +326,11 @@ export default function StepQuoteForm() {
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+              <label htmlFor="step-city" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
                 Localitate / Oraș
               </label>
               <input
+                id="step-city"
                 type="text"
                 placeholder="Ex: Arad, Timișoara, Oradea..."
                 value={formData.city}
@@ -353,7 +359,7 @@ export default function StepQuoteForm() {
             <button
               type="button"
               onClick={nextStep}
-              className="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-lg inline-flex items-center justify-center gap-1.5 transition-all w-full sm:w-auto"
+              className="px-6 py-3 bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs rounded-xl shadow-lg inline-flex items-center justify-center gap-1.5 transition-all w-full sm:w-auto"
             >
               <span>Pasul Următor</span>
               <ArrowRight className="w-4 h-4" />
@@ -371,6 +377,7 @@ export default function StepQuoteForm() {
                 <ShieldCheck className="w-4 h-4 text-amber-300 shrink-0" />
                 <span>{loading ? "Se trimite..." : "Trimite pentru estimare"}</span>
               </button>
+              <FormPrivacyNote className="text-center sm:text-right" />
             </div>
           )}
         </div>

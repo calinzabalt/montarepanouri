@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import companyData from "@/data/company.json";
 import servicesData from "@/data/services.json";
+import { openCookieSettings } from "@/lib/cookie-consent";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -66,9 +67,9 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-white text-sm font-bold uppercase tracking-wider">
+            <h2 className="text-white text-sm font-bold uppercase tracking-wider">
               Navigare Rapidă
-            </h4>
+            </h2>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link href="/" className="hover:text-emerald-400 transition-colors">
@@ -105,9 +106,9 @@ export default function Footer() {
 
           {/* Column 3: Services Links */}
           <div className="space-y-4">
-            <h4 className="text-white text-sm font-bold uppercase tracking-wider">
+            <h2 className="text-white text-sm font-bold uppercase tracking-wider">
               Serviciile Noastre
-            </h4>
+            </h2>
             <ul className="space-y-2.5 text-sm">
               {servicesData.map((s) => (
                 <li key={s.slug}>
@@ -124,9 +125,9 @@ export default function Footer() {
 
           {/* Column 4: Contact & ANPC Banners */}
           <div className="space-y-4">
-            <h4 className="text-white text-sm font-bold uppercase tracking-wider">
+            <h2 className="text-white text-sm font-bold uppercase tracking-wider">
               Contact Operativ
-            </h4>
+            </h2>
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
@@ -173,9 +174,16 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom Bar */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <div>
-            © {currentYear} {companyData.legalName}. Toate drepturile rezervate.
+        <div className="pt-8 flex flex-col md:flex-row md:items-end justify-between gap-6 text-xs text-slate-400">
+          <div className="space-y-1.5 max-w-xl">
+            <div>
+              © {currentYear} {companyData.legalName}. Toate drepturile rezervate.
+            </div>
+            <div className="leading-relaxed">
+              CUI {companyData.cui} · Nr. Registrul Comerțului {companyData.tradeRegister}
+              <br />
+              Sediu social: {companyData.legalAddress}
+            </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-6">
@@ -188,6 +196,13 @@ export default function Footer() {
             <Link href="/politica-cookies" className="hover:text-white transition-colors">
               Politică de Cookie-uri
             </Link>
+            <button
+              type="button"
+              onClick={openCookieSettings}
+              className="hover:text-white transition-colors"
+            >
+              Setări cookie
+            </button>
           </div>
         </div>
       </div>

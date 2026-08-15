@@ -1,0 +1,39 @@
+# MontarePanouri.ro
+
+> Montaj la cheie pentru panouri solare și baterii / bancuri de stocare. Focus pe Arad, Timișoara și Vestul României; proiecte mai mari cu stocare și la nivel național.
+
+Operator: BRE SOLAR S.R.L. (CUI 55422983, J2026049697009). Site: https://montarepanouri.ro
+
+## Pagini principale
+
+- [Acasă](https://montarepanouri.ro/): montaj panouri solare și baterii la cheie
+- [Servicii](https://montarepanouri.ro/servicii): gama de servicii de montaj și diagnostic
+- [Galerie](https://montarepanouri.ro/galerie): imagini reale din teren
+- [Blog](https://montarepanouri.ro/blog): articole și ghiduri practice
+- [Contact](https://montarepanouri.ro/contact): telefon, WhatsApp, formular
+- [Cere ofertă](https://montarepanouri.ro/cere-oferta): formular de estimare
+
+## Servicii
+
+- [Montaj panouri solare rezidențial](https://montarepanouri.ro/servicii/instalatii-panouri-fotovoltaice-rezidential)
+- [Baterii și bancuri de stocare](https://montarepanouri.ro/servicii/sisteme-de-stocare-si-baterii)
+- [Montaj panouri pe acoperișuri mari](https://montarepanouri.ro/servicii/montaj-panouri-commercial-industrial)
+- [Diagnostic și verificare tehnică](https://montarepanouri.ro/servicii/mentenanta-diagnostic-curatare)
+
+## Ce nu oferim
+
+- Depunere dosar prosumator
+- Autorizări ANRE
+
+## Date de contact
+
+- Telefon: 0743 960 969
+- Email: contact@montarepanouri.ro
+- WhatsApp: https://wa.me/40743960969
+
+## Documente legale
+
+- [Politică de confidențialitate](https://montarepanouri.ro/politica-confidentialitate)
+- [Termeni și condiții](https://montarepanouri.ro/termeni-conditii)
+- [Politică de cookie-uri](https://montarepanouri.ro/politica-cookies)
+- [Sitemap](https://montarepanouri.ro/sitemap.xml)

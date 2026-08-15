@@ -13,6 +13,7 @@ import {
 import companyData from "@/data/company.json";
 import CoverageMapSection from "@/components/sections/CoverageMapSection";
 import { submitContact } from "@/lib/submit-contact";
+import FormPrivacyNote from "@/components/ui/FormPrivacyNote";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -186,10 +187,11 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="contact-name" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
                       Nume &amp; Prenume *
                     </label>
                     <input
+                      id="contact-name"
                       type="text"
                       required
                       placeholder="Ion Popescu"
@@ -200,10 +202,11 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="contact-phone" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
                       Telefon Mobil *
                     </label>
                     <input
+                      id="contact-phone"
                       type="tel"
                       required
                       placeholder="0743 960 969"
@@ -216,10 +219,11 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="contact-email" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
                       Email
                     </label>
                     <input
+                      id="contact-email"
                       type="email"
                       placeholder="email@domeniu.ro"
                       value={formData.email}
@@ -229,10 +233,11 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="contact-subject" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
                       Subiect
                     </label>
                     <input
+                      id="contact-subject"
                       type="text"
                       placeholder="Ex: Întrebare garanție, Suport..."
                       value={formData.subject}
@@ -243,10 +248,11 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                  <label htmlFor="contact-message" className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
                     Mesajul Tău *
                   </label>
                   <textarea
+                    id="contact-message"
                     rows={4}
                     required
                     placeholder="Scrieți mesajul dumneavoastră aici..."
@@ -262,11 +268,12 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-3.5 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-xs rounded-xl shadow-lg flex items-center justify-center gap-2 transition-all"
+                  className="w-full py-3.5 bg-emerald-700 hover:bg-emerald-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-xs rounded-xl shadow-lg flex items-center justify-center gap-2 transition-all"
                 >
                   <Send className="w-4 h-4" />
                   <span>{loading ? "SE TRIMITE..." : "TRIMITE MESAJUL GENERAL"}</span>
                 </button>
+                <FormPrivacyNote className="text-center" />
               </form>
             )}
           </div>

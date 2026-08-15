@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { X, Send, CheckCircle2, ShieldCheck, PhoneCall } from "lucide-react";
 import { submitContact } from "@/lib/submit-contact";
+import FormPrivacyNote from "@/components/ui/FormPrivacyNote";
 
 interface QuickQuoteModalProps {
   isOpen: boolean;
@@ -81,7 +82,7 @@ export default function QuickQuoteModal({
                     setSubmitted(false);
                     onClose();
                   }}
-                  className="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-medium rounded-xl transition-all shadow-lg shadow-emerald-900/30"
+                  className="px-6 py-2.5 bg-emerald-700 hover:bg-emerald-600 text-white font-medium rounded-xl transition-all shadow-lg shadow-emerald-900/30"
                 >
                   Am înțeles / Închide
                 </button>
@@ -103,10 +104,11 @@ export default function QuickQuoteModal({
 
               <form onSubmit={handleSubmit} className="space-y-3.5">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                  <label htmlFor="modal-name" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
                     Nume &amp; Prenume *
                   </label>
                   <input
+                    id="modal-name"
                     type="text"
                     required
                     placeholder="Ex: Ion Popescu"
@@ -118,10 +120,11 @@ export default function QuickQuoteModal({
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="modal-phone" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
                       Telefon Mobil *
                     </label>
                     <input
+                      id="modal-phone"
                       type="tel"
                       required
                       placeholder="0743 960 969"
@@ -132,10 +135,11 @@ export default function QuickQuoteModal({
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="modal-county" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
                       Județ / Locație *
                     </label>
                     <select
+                      id="modal-county"
                       value={formData.county}
                       onChange={(e) => setFormData({ ...formData, county: e.target.value })}
                       className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 text-sm"
@@ -151,10 +155,11 @@ export default function QuickQuoteModal({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                  <label htmlFor="modal-service" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
                     Serviciul Dorit
                   </label>
                   <select
+                    id="modal-service"
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                     className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 text-sm"
@@ -175,10 +180,11 @@ export default function QuickQuoteModal({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                  <label htmlFor="modal-notes" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
                     Detalii Suplimentare (Opțional)
                   </label>
                   <textarea
+                    id="modal-notes"
                     rows={2}
                     placeholder="Ex: Suprafață acoperiș, dorință baterii / banc de stocare..."
                     value={formData.notes}
@@ -194,11 +200,12 @@ export default function QuickQuoteModal({
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-3.5 px-6 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold rounded-xl shadow-lg shadow-emerald-900/30 transition-all flex items-center justify-center gap-2 group"
+                    className="w-full py-3.5 px-6 bg-emerald-700 hover:bg-emerald-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold rounded-xl shadow-lg shadow-emerald-900/30 transition-all flex items-center justify-center gap-2 group"
                   >
                     <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     {loading ? "Se trimite..." : "Trimite Cerere Estimare Montaj"}
                   </button>
+                  <FormPrivacyNote className="text-center" />
                 </div>
 
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between text-xs text-slate-400 pt-2 border-t border-slate-800">

@@ -55,7 +55,7 @@ export default function GalleryPage() {
           <div className="pt-2">
             <Link
               href="/cere-oferta"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm rounded-2xl shadow-xl shadow-emerald-950/60 transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-700 hover:bg-emerald-600 text-white font-extrabold text-sm rounded-2xl shadow-xl shadow-emerald-950/60 transition-all hover:scale-105"
             >
               <Sun className="w-5 h-5 text-amber-300" />
               <span>CERE O OFERTĂ</span>

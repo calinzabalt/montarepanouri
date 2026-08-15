@@ -5,6 +5,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import FloatingWhatsAppButton from "@/components/ui/FloatingWhatsAppButton";
+import CookieBanner from "@/components/ui/CookieBanner";
+import GoogleAnalytics from "@/components/ui/GoogleAnalytics";
+import ScrollToTop from "@/components/layout/ScrollToTop";
 import companyData from "@/data/company.json";
 import blogData from "@/data/blog.json";
 import servicesData from "@/data/services.json";
@@ -85,6 +88,8 @@ export default function RootLayout({
     "@id": `${companyData.website}/#business`,
     name: companyData.name,
     legalName: companyData.legalName,
+    taxID: companyData.cui,
+    identifier: companyData.tradeRegister,
     description: companyData.description,
     url: companyData.website,
     telephone: companyData.phone,
@@ -108,8 +113,9 @@ export default function RootLayout({
     ],
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Timișoara",
-      addressRegion: "Timiș",
+      streetAddress: "Nr. 84",
+      addressLocality: "Zăbalț, Comuna Ususău",
+      addressRegion: "Arad",
       addressCountry: "RO",
     },
     openingHoursSpecification: [
@@ -139,6 +145,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} antialiased selection:bg-emerald-500 selection:text-white`}>
+        <ScrollToTop />
         <Header />
         <Breadcrumbs
           blogEntries={breadcrumbBlogEntries}
@@ -147,6 +154,8 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <FloatingWhatsAppButton />
+        <CookieBanner />
+        <GoogleAnalytics />
       </body>
     </html>
   );
