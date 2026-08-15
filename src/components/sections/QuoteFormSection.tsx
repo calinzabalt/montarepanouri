@@ -238,7 +238,7 @@ export default function QuoteFormSection({
                   disabled={loading}
                   className="w-full py-3.5 sm:py-4 px-4 sm:px-8 bg-gradient-to-r from-emerald-500 via-teal-500 to-amber-500 hover:from-emerald-600 hover:to-amber-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-extrabold text-sm sm:text-base rounded-2xl shadow-xl shadow-emerald-950/60 transition-all flex flex-wrap items-center justify-center gap-2 group"
                 >
-                  <Zap className="w-5 h-5 text-amber-300 group-hover:scale-110 transition-transform shrink-0" />
+                  <Zap className="w-5 h-5 text-amber-300 md:group-hover:scale-110 md:transition-transform shrink-0" />
                   <span>{loading ? "Se trimite..." : "Trimite cererea pentru estimare"}</span>
                   <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform shrink-0" />
                 </button>

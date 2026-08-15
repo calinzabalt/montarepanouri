@@ -185,7 +185,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                     alt={`${service.title} - Imagine ${i + 1}`}
                     width={900}
                     height={700}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover zoom-on-hover"
                   />
                   <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors" />
                 </div>

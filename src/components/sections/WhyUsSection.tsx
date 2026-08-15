@@ -70,7 +70,7 @@ export default function WhyUsSection({
               className="glass-card rounded-2xl p-5 sm:p-8 relative group"
             >
               <div className="space-y-4">
-                <div className="w-14 h-14 rounded-2xl bg-slate-800 border border-slate-700/60 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 rounded-2xl bg-slate-800 border border-slate-700/60 flex items-center justify-center zoom-on-hover-lg">
                   {getIcon(item.icon)}
                 </div>
                 <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">

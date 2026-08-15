@@ -21,7 +21,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-300 border-t border-slate-800 pt-16 pb-8 relative overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-24 bg-emerald-500/10 blur-3xl pointer-events-none" />
+      <div className="hidden sm:block absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-24 bg-emerald-500/10 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4">
         {/* Main Grid */}

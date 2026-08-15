@@ -82,7 +82,7 @@ export default function ServicesSection({
                     width={800}
                     height={450}
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="w-full h-full object-cover md:group-hover:scale-105 md:transition-transform md:duration-500"
+                    className="w-full h-full object-cover zoom-on-hover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
                   

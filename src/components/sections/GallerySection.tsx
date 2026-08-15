@@ -73,10 +73,10 @@ export default function GallerySection({
               <button
                 key={cat.id}
                 onClick={() => setActiveTab(cat.id)}
-                className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-colors ${
                   activeTab === cat.id
-                    ? "bg-emerald-700 text-white shadow-lg shadow-emerald-950/50 scale-105"
-                    : "bg-slate-900 text-slate-400 hover:text-white border border-slate-800 hover:border-slate-700"
+                    ? "bg-emerald-700 text-white"
+                    : "bg-slate-900 text-slate-400 border border-slate-800"
                 }`}
               >
                 {cat.label}
@@ -92,30 +92,31 @@ export default function GallerySection({
               className="glass-card rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between group"
             >
               <div>
-                <div className="relative h-60 w-full overflow-hidden bg-slate-900">
+                <div className="relative h-48 sm:h-60 w-full overflow-hidden bg-slate-900">
                   <Image
                     src={proj.image}
                     alt={proj.title}
-                    width={1200}
-                    height={800}
-                    className="w-full h-full object-cover md:group-hover:scale-110 md:transition-transform md:duration-700"
+                    width={800}
+                    height={500}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="w-full h-full object-cover zoom-on-hover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
 
-                  <span className="absolute top-3 left-3 px-3 py-1 bg-slate-950/80 backdrop-blur-md border border-slate-800 rounded-lg text-emerald-400 text-[11px] font-bold">
+                  <span className="absolute top-3 left-3 px-3 py-1 bg-slate-950/90 border border-slate-800 rounded-lg text-emerald-400 text-[11px] font-bold">
                     {proj.categoryLabel}
                   </span>
 
                   <button
                     onClick={() => setSelectedImage({ src: proj.image, alt: proj.title })}
-                    className="absolute top-3 right-3 p-2 bg-slate-900/80 hover:bg-emerald-600 text-white rounded-lg opacity-0 group-hover:opacity-100 transition-all transform scale-90 group-hover:scale-100 shadow-md"
+                    className="absolute top-3 right-3 p-2 bg-slate-900/90 text-white rounded-lg md:opacity-0 md:group-hover:opacity-100 md:transition-opacity"
                     aria-label="Mărește Imaginea"
                   >
                     <Maximize2 className="w-4 h-4" />
                   </button>
 
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white">
-                    <span className="flex items-center gap-1 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-md border border-slate-800 font-semibold text-amber-400">
+                    <span className="flex items-center gap-1 bg-slate-900/90 px-2.5 py-1 rounded-md border border-slate-800 font-semibold text-amber-400">
                       <Zap className="w-3.5 h-3.5" /> {proj.capacity}
                     </span>
                   </div>
@@ -127,7 +128,7 @@ export default function GallerySection({
                     <span>{proj.location}</span>
                   </div>
 
-                  <h3 className="text-base font-bold text-white group-hover:text-emerald-400 transition-colors leading-snug">
+                  <h3 className="text-base font-bold text-white md:group-hover:text-emerald-400 leading-snug">
                     {proj.title}
                   </h3>
 
@@ -154,7 +155,7 @@ export default function GallerySection({
           <div className="text-center mt-12">
             <Link
               href="/galerie"
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm rounded-xl border border-slate-700 transition-all shadow-lg hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm rounded-xl border border-slate-700"
             >
               <span>Vezi Toate Proiectele din Galerie</span>
               <ArrowRight className="w-4 h-4 text-emerald-400" />

@@ -124,12 +124,12 @@ export default function HeroSection({
                   width={1200}
                   height={800}
                   priority
-                  className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
+                  className="w-full h-full object-cover zoom-on-hover-sm"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#080F1A] via-transparent to-transparent" />
               </div>
               <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 text-xs">
-                <span className="flex items-center gap-2 bg-[#080F1A]/90 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-white/[0.08] text-slate-300">
+                <span className="flex items-center gap-2 bg-[#080F1A]/90 px-3 py-1.5 rounded-lg border border-white/[0.08] text-slate-300">
                   <Zap className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                   Panouri + Baterie
                 </span>
@@ -141,7 +141,7 @@ export default function HeroSection({
 
             {/* Mini form card */}
             <div className="rounded-2xl bg-[#0D1727] border border-white/[0.08] p-4 sm:p-6 shadow-xl relative overflow-hidden">
-              <div className="absolute -top-10 -right-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />
+              <div className="hidden sm:block absolute -top-10 -right-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />
 
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-4">

@@ -14,7 +14,7 @@ import servicesData from "@/data/services.json";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "600", "700"],
   display: "swap",
 });
 
@@ -64,6 +64,9 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+  verification: {
+    google: "e5YaqRtshzzAPaPTHVClxR232SJzZ_FTAA_HW3dSXUc",
   },
 };
 
@@ -133,7 +136,6 @@ export default function RootLayout({
       },
     ],
     knowsAbout: companyData.servicesOffered,
-    sameAs: Object.values(companyData.socials),
   };
 
   return (

@@ -26,26 +26,26 @@ export default function CookieBanner() {
   };
 
   return (
-    <div className="fixed z-[60] left-4 right-4 bottom-24 sm:bottom-6 sm:left-6 sm:right-auto sm:max-w-md">
-      <div className="rounded-2xl bg-slate-900/95 border border-slate-700 shadow-2xl p-4 sm:p-5 backdrop-blur-md">
-        <p className="text-sm text-slate-200 leading-relaxed">
-          Folosim cookie-uri esențiale și, cu acordul tău, Google Analytics pentru a înțelege cum e folosit site-ul.{" "}
-          <Link href="/politica-cookies" className="text-emerald-400 hover:underline">
+    <div className="fixed z-[60] inset-x-0 bottom-0 sm:inset-auto sm:bottom-6 sm:left-6 sm:right-auto sm:max-w-md">
+      <div className="flex items-center gap-2 bg-slate-950 border-t border-slate-800 px-2.5 py-1.5 pb-[max(0.375rem,env(safe-area-inset-bottom))] sm:block sm:rounded-2xl sm:border sm:bg-slate-900 sm:p-5 sm:pb-5">
+        <p className="min-w-0 flex-1 text-[10px] leading-tight text-slate-400 sm:text-sm sm:leading-relaxed sm:text-slate-200">
+          Cookie-uri.{" "}
+          <Link href="/politica-cookies" className="text-emerald-400 underline sm:no-underline sm:hover:underline">
             Detalii
           </Link>
         </p>
-        <div className="mt-4 flex flex-col sm:flex-row gap-2">
+        <div className="flex shrink-0 gap-1 sm:mt-4 sm:gap-2">
           <button
             type="button"
             onClick={() => choose(true)}
-            className="flex-1 px-4 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-semibold transition-colors"
+            className="px-2.5 py-1 rounded-md bg-emerald-700 hover:bg-emerald-600 text-white text-[10px] font-semibold sm:flex-1 sm:px-4 sm:py-2.5 sm:rounded-xl sm:text-sm"
           >
             Accept
           </button>
           <button
             type="button"
             onClick={() => choose(false)}
-            className="flex-1 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 text-sm font-semibold transition-colors"
+            className="px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-slate-200 text-[10px] font-semibold sm:flex-1 sm:px-4 sm:py-2.5 sm:rounded-xl sm:text-sm"
           >
             Refuz
           </button>

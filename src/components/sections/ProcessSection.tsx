@@ -24,7 +24,7 @@ export default function ProcessSection({
   return (
     <section className="py-16 sm:py-24 lg:py-32 bg-slate-900/80 border-y border-white/[0.06] relative overflow-hidden">
       {/* Glow elements */}
-      <div className="absolute top-1/2 left-0 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="hidden sm:block absolute top-1/2 left-0 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
@@ -51,7 +51,7 @@ export default function ProcessSection({
               <div>
                 {/* Step Badge */}
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl font-black font-mono text-emerald-400/90 group-hover:scale-110 transition-transform">
+                  <span className="text-3xl font-black font-mono text-emerald-400/90 zoom-on-hover-lg inline-block">
                     {s.step}
                   </span>
                   <span className="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-emerald-400">

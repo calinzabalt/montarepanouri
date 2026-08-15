@@ -103,6 +103,13 @@
     0 16px 40px -12px rgba(0, 0, 0, 0.60);
 }
 
+@media (max-width: 767px) {
+  .glass-card {
+    background: #101828;
+    box-shadow: none;
+  }
+}
+
 @media (hover: hover) and (pointer: fine) {
   .glass-card {
     transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
@@ -114,6 +121,27 @@
     box-shadow:
       0 1px 0 0 rgba(255, 255, 255, 0.07) inset,
       0 24px 48px -16px rgba(16, 185, 129, 0.18);
+  }
+
+  .zoom-on-hover {
+    transition: transform 0.5s ease;
+  }
+
+  .group:hover .zoom-on-hover {
+    transform: scale(1.05);
+  }
+
+  .group:hover .zoom-on-hover-sm {
+    transform: scale(1.03);
+  }
+
+  .group:hover .zoom-on-hover-lg {
+    transform: scale(1.1);
+  }
+
+  .zoom-on-hover-sm,
+  .zoom-on-hover-lg {
+    transition: transform 0.35s ease;
   }
 }
 
@@ -207,6 +235,9 @@
 @media (max-width: 767px), (prefers-reduced-motion: reduce) {
   .whatsapp-float,
   .whatsapp-pulse {
+    animation: none;
+  }
+  .ticker-track {
     animation: none;
   }
 }

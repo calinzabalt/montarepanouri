@@ -69,16 +69,16 @@ export default function Header() {
 
         {/* ── Main nav ── */}
         <nav
-          className={`transition-all duration-300 ${
+          className={`transition-colors duration-200 ${
             isScrolled
-              ? "bg-[#080F1A]/95 backdrop-blur-2xl shadow-[0_1px_0_rgba(255,255,255,0.05)] py-3"
-              : "bg-[#080F1A]/70 backdrop-blur-xl py-4"
+              ? "bg-[#080F1A] sm:bg-[#080F1A]/95 sm:backdrop-blur-2xl shadow-[0_1px_0_rgba(255,255,255,0.05)] py-3"
+              : "bg-[#080F1A] sm:bg-[#080F1A]/70 sm:backdrop-blur-xl py-4"
           }`}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-2 sm:gap-6">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 sm:gap-3 group min-w-0">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-900/30 group-hover:scale-105 transition-transform shrink-0">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-900/30 md:group-hover:scale-105 md:transition-transform shrink-0">
                 <Sun className="w-5 h-5 text-slate-950" />
               </div>
               <div className="flex flex-col leading-none min-w-0">
@@ -149,7 +149,7 @@ export default function Header() {
             <div className="hidden lg:flex items-center">
               <button
                 onClick={() => setModalOpen(true)}
-                className="group flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-bold shadow-lg shadow-emerald-900/40 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="group flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-bold shadow-lg shadow-emerald-900/40 md:hover:scale-[1.02] active:scale-[0.98] transition-transform"
               >
                 <Zap className="w-4 h-4 text-amber-300 group-hover:rotate-12 transition-transform" />
                 Cere Ofertă

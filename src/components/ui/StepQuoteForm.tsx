@@ -89,7 +89,7 @@ export default function StepQuoteForm() {
   }
 
   return (
-    <div className="bg-slate-900/90 backdrop-blur-xl border border-slate-800 rounded-2xl sm:rounded-3xl p-4 sm:p-10 shadow-2xl">
+    <div className="bg-slate-900 sm:bg-slate-900/90 sm:backdrop-blur-xl border border-slate-800 rounded-2xl sm:rounded-3xl p-4 sm:p-10 shadow-2xl">
       {/* Progress Bar Header */}
       <div className="mb-6 sm:mb-8 space-y-3">
         <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-bold uppercase tracking-wider text-slate-400">

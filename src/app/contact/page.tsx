@@ -77,7 +77,7 @@ export default function ContactPage() {
                 href={`tel:${companyData.phoneRaw}`}
                 className="flex items-start gap-4 p-5 bg-slate-900 border border-slate-800 hover:border-emerald-500/50 rounded-2xl transition-all group"
               >
-                <div className="p-3 bg-slate-800 rounded-xl text-emerald-400 group-hover:scale-110 transition-transform">
+                <div className="p-3 bg-slate-800 rounded-xl text-emerald-400 zoom-on-hover-lg">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
@@ -97,7 +97,7 @@ export default function ContactPage() {
                 rel="noreferrer"
                 className="flex items-start gap-4 p-5 bg-slate-900 border border-slate-800 hover:border-emerald-500/50 rounded-2xl transition-all group"
               >
-                <div className="p-3 bg-slate-800 rounded-xl text-emerald-400 group-hover:scale-110 transition-transform">
+                <div className="p-3 bg-slate-800 rounded-xl text-emerald-400 zoom-on-hover-lg">
                   <MessageCircle className="w-6 h-6" />
                 </div>
                 <div>
@@ -115,7 +115,7 @@ export default function ContactPage() {
                 href={`mailto:${companyData.email}`}
                 className="flex items-start gap-4 p-5 bg-slate-900 border border-slate-800 hover:border-emerald-500/50 rounded-2xl transition-all group"
               >
-                <div className="p-3 bg-slate-800 rounded-xl text-emerald-400 group-hover:scale-110 transition-transform">
+                <div className="p-3 bg-slate-800 rounded-xl text-emerald-400 zoom-on-hover-lg">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>

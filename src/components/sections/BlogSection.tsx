@@ -65,7 +65,7 @@ export default function BlogSection({
                 alt={highlightedArticle.title}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="object-cover zoom-on-hover"
               />
               <div className="absolute top-4 left-4 z-10 px-3 py-1 bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider rounded-lg shadow-lg">
                 Articol Recomandat
@@ -126,9 +126,9 @@ export default function BlogSection({
                     alt={art.title}
                     width={1200}
                     height={700}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover zoom-on-hover"
                   />
-                  <div className="absolute top-3 left-3 px-2.5 py-0.5 bg-slate-950/80 backdrop-blur-md border border-slate-800 text-emerald-400 text-[11px] font-bold rounded">
+                  <div className="absolute top-3 left-3 px-2.5 py-0.5 bg-slate-950/90 border border-slate-800 text-emerald-400 text-[11px] font-bold rounded">
                     {art.categoryLabel}
                   </div>
                 </div>
