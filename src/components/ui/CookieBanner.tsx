@@ -29,7 +29,7 @@ export default function CookieBanner() {
     <div className="fixed z-[60] inset-x-0 bottom-0 sm:inset-auto sm:bottom-6 sm:left-6 sm:right-auto sm:max-w-md">
       <div className="flex items-center gap-2 bg-slate-950 border-t border-slate-800 px-2.5 py-1.5 pr-16 pb-[max(0.375rem,env(safe-area-inset-bottom))] sm:block sm:rounded-2xl sm:border sm:bg-slate-900 sm:p-5 sm:pr-5 sm:pb-5">
         <p className="min-w-0 flex-1 text-[11px] leading-snug text-slate-300 sm:text-sm sm:leading-relaxed sm:text-slate-200">
-          Cookie-uri esențiale și, cu acordul tău, Analytics.{" "}
+          Folosim cookie-uri esențiale și, cu acordul tău, Google Analytics pentru a înțelege cum e folosit site-ul.{" "}
           <Link href="/politica-cookies" className="text-emerald-400 underline sm:no-underline sm:hover:underline">
             Detalii
           </Link>
