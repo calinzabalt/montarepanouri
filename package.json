@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node scripts/generate-favicons.mjs && next dev",
+    "build": "node scripts/generate-favicons.mjs && next build",
+    "generate:favicons": "node scripts/generate-favicons.mjs",
     "start": "next start",
     "lint": "eslint"
   },
@@ -23,6 +24,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.12",
+    "sharp": "^0.34.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

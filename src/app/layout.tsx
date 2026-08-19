@@ -24,7 +24,6 @@ export const metadata: Metadata = {
     default: "Montaj Panouri Solare & Baterii la Cheie | MontarePanouri.ro",
     template: "%s | MontarePanouri.ro",
   },
-  description: companyData.description,
   keywords: [
     "montaj panouri solare",
     "montaj panouri fotovoltaice",
@@ -36,13 +35,7 @@ export const metadata: Metadata = {
     "sisteme hibrid fotovoltaice",
   ],
   authors: [{ name: companyData.name }],
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
-    title: "Montaj Panouri Solare & Baterii la Cheie | MontarePanouri.ro",
-    description: companyData.description,
-    url: companyData.website,
     siteName: companyData.name,
     locale: "ro_RO",
     type: "website",
@@ -57,8 +50,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Montaj Panouri Solare & Baterii | MontarePanouri.ro",
-    description: companyData.description,
     images: ["/images/panouri-pe-acoperis-tila.jpg"],
   },
   robots: {

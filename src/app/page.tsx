@@ -24,6 +24,11 @@ export const metadata: Metadata = {
       "Montaj panouri solare și baterii / bancuri de stocare la cheie în Arad, Timișoara și Vestul României.",
     url: "/",
   },
+  twitter: {
+    title: "Montaj Panouri Solare & Baterii la Cheie | MontarePanouri.ro",
+    description:
+      "Montaj panouri solare și baterii / bancuri de stocare la cheie. Focus pe Arad, Timișoara și Vestul României; proiecte mai mari cu stocare și la nivel național.",
+  },
 };
 
 export default function HomePage() {
